@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "Mum & Baby",
+    "description": "This project is really great.",
+    "slug": "mumandbabypolish",
+    "privacy": "unlisted",
+    "sdkVersion": "30.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "version": "3.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FA7E5B"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.imagineear.mumandbabypolish",
+      "publishBundlePath": "ios/mum---baby/Supporting/shell-app.bundle",
+      "publishManifestPath": "ios/mum---baby/Supporting/shell-app-manifest.json",
+      "config": {
+        "googleSignIn": {
+          "reservedClientId": "com.googleusercontent.apps.145027294735-6g2076uorogpth72aones7ajsre6b0es"
+        }
+      }
+    },
+    "isDetached": true,
+    "detach": {
+      "iosExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/ios-v2.8.4-sdk30.0.0-3de13133-1adc-4ba1-8569-a84011e570b4.tar.gz",
+      "androidExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/android-v2.8.1-sdk30.0.0-271c32ab-0715-4dfb-8270-ecead3679bb4.tar.gz"
+    },
+    "scheme": "exp3d7bf441182c49b8b5bcd2304e26110f",
+    "android": {
+      "package": "com.imagineear.mumandbabypolish",
+      "publishBundlePath": "android/app/src/main/assets/shell-app.bundle",
+      "publishManifestPath": "android/app/src/main/assets/shell-app-manifest.json",
+      "config": {
+        "googleSignIn": {
+          "apiKey": "AIzaSyCXc8CWWaqQhMaOzZOPAhBrB86JkXFY_Kk",
+          "certificateHash": "06:C0:20:FD:FF:6A:A0:11:63:CB:CE:F0:54:BB:5E:4A:98:F0:57:72"
+        }
+      }
+    }
+  }
+}
