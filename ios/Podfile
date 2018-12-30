@@ -1,7 +1,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 
-target 'mum---baby' do
+target 'hand-therapy' do
   pod 'ExpoKit',
     :git => "http://github.com/expo/expo.git",
     :tag => "ios/2.8.4",
@@ -49,8 +49,6 @@ target 'mum---baby' do
     :path => "../node_modules/expo-location/ios"
   pod 'EXMediaLibrary',
     :path => "../node_modules/expo-media-library/ios"
-  pod 'EXPaymentsStripe',
-    :path => "../node_modules/expo-payments-stripe/ios"
   pod 'EXPermissions',
     :path => "../node_modules/expo-permissions/ios"
   pod 'EXPermissionsInterface',
@@ -100,12 +98,6 @@ target 'mum---baby' do
     :inhibit_warnings => true
 
 
-  pod 'rn-fetch-blob', :path => '../node_modules/rn-fetch-blob'
-
-  pod 'react-native-pdf', :path => '../node_modules/react-native-pdf'
-
-  pod 'RNShare', :path => '../node_modules/react-native-share'
-
   post_install do |installer|
     installer.pods_project.main_group.tab_width = '2';
     installer.pods_project.main_group.indent_width = '2';
@@ -138,11 +130,14 @@ target 'mum---baby' do
         config.build_settings['HEADER_SEARCH_PATHS'] ||= ['$(inherited)']
       end
     end
-    # Build React Native with RCT_DEV enabled
+    # Build React Native with RCT_DEV enabled and RCT_ENABLE_INSPECTOR and
+    # RCT_ENABLE_PACKAGER_CONNECTION disabled
     next unless target.pod_name == 'React'
     target.native_target.build_configurations.each do |config|
       config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)']
       config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'RCT_DEV=1'
+      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'RCT_ENABLE_INSPECTOR=0'
+      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] << 'ENABLE_PACKAGER_CONNECTION=0'
     end
 
     end

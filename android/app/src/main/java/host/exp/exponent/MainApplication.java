@@ -10,14 +10,8 @@ import expolib_v1.okhttp3.OkHttpClient;
 
 // Needed for `react-native link`
 // import com.facebook.react.ReactApplication;
-import cl.json.RNSharePackage;
-import cl.json.ShareApplication;
-import com.airship.customwebview.CustomWebViewPackage;
-import org.wonday.pdf.RCTPdfView;
-import com.RNFetchBlob.RNFetchBlobPackage;
-import com.christopherdro.htmltopdf.RNHTMLtoPDFPackage;
 
-public class MainApplication extends ExpoApplication implements ShareApplication {
+public class MainApplication extends ExpoApplication {
 
   @Override
   public boolean isDebug() {
@@ -31,18 +25,8 @@ public class MainApplication extends ExpoApplication implements ShareApplication
         // TODO: add native modules!
 
         // Needed for `react-native link`
-        // new MainReactPackage(),
-            new RNSharePackage(),
-            new CustomWebViewPackage(),
-            new RCTPdfView(),
-            new RNFetchBlobPackage(),
-            new RNHTMLtoPDFPackage()
+        // new MainReactPackage()
     );
-  }
-
-  @Override
-  public String getFileProviderAuthority() {
-    return "com.imagineear.mumandbabypolish.provider";
   }
 
   @Override

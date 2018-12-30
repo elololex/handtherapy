@@ -20,9 +20,9 @@ android {
   buildToolsVersion '27.0.3'
 
   defaultConfig {
-    applicationId 'com.imagineear.mumandbabypolish'
+    applicationId 'com.imagineear.handtherapy'
     targetSdkVersion 26
-    versionCode 2
+    versionCode 1
     versionName '3.0.1'
     ndk {
       abiFilters 'armeabi-v7a', 'x86'
@@ -64,9 +64,9 @@ android {
       ext.enableCrashlytics = false
     }
     release {
-      minifyEnabled false
+      minifyEnabled true
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-      zipAlignEnabled false
+      zipAlignEnabled true
     }
   }
   signingConfigs {
@@ -82,7 +82,6 @@ android {
   }
   configurations.all {
     resolutionStrategy.force 'com.android.support:design:27.1.0'
-    resolutionStrategy.force 'com.android.support:appcompat-v7:27.1.1'
   }
 }
 
@@ -100,11 +99,6 @@ apply from: 'expo.gradle'
 
 
 dependencies {
-    compile project(':react-native-share')
-    compile project(':react-native-android-fullscreen-webview-video')
-    compile project(':react-native-pdf')
-    compile project(':rn-fetch-blob')
-    compile project(':react-native-html-to-pdf')
   implementation fileTree(dir: 'libs', include: ['*.jar'])
 
   implementation 'com.android.support:multidex:1.0.1'
@@ -183,17 +177,7 @@ dependencies {
     exclude group: 'com.squareup.okhttp3', module: 'okhttp-urlconnection'
   }
   
-  /* REMOVED_WHEN_DISTRIBUTING_FROM_HERE
-  implementation(project(path: ':expoview')) {
-    // Excluding okhttp3 included by expo-file-system
-    exclude group: 'com.squareup.okhttp3', module: 'okhttp'
-    exclude group: 'com.squareup.okhttp3', module: 'okhttp-urlconnection'
-  }
-  REMOVED_WHEN_DISTRIBUTING_TO_HERE */
-
 }
 
 // This has to be down here for some reason
 apply plugin: 'com.google.gms.google-services'
-
-

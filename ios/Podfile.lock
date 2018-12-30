@@ -78,9 +78,6 @@ PODS:
   - EXMediaLibrary (1.0.0):
     - EXCore
     - EXPermissionsInterface
-  - EXPaymentsStripe (1.0.1):
-    - EXCore
-    - Stripe (~> 13.0.3)
   - EXPermissions (1.1.0):
     - EXCore
     - EXPermissionsInterface
@@ -182,8 +179,6 @@ PODS:
   - lottie-ios (2.5.2)
   - React (0.55.4):
     - React/Core (= 0.55.4)
-  - react-native-pdf (5.0.8):
-    - React
   - React/ART (0.55.4):
     - React/Core
   - React/Core (0.55.4):
@@ -230,11 +225,6 @@ PODS:
     - React/Core
     - React/fishhook
     - React/RCTBlob
-  - rn-fetch-blob (0.10.6):
-    - React/Core
-  - RNShare (1.1.3):
-    - React
-  - Stripe (13.0.3)
   - yoga (0.55.4.React)
 
 DEPENDENCIES:
@@ -259,7 +249,6 @@ DEPENDENCIES:
   - EXLocalAuthentication (from `../node_modules/expo-local-authentication/ios`)
   - EXLocation (from `../node_modules/expo-location/ios`)
   - EXMediaLibrary (from `../node_modules/expo-media-library/ios`)
-  - EXPaymentsStripe (from `../node_modules/expo-payments-stripe/ios`)
   - EXPermissions (from `../node_modules/expo-permissions/ios`)
   - EXPermissionsInterface (from `../node_modules/expo-permissions-interface/ios`)
   - ExpoKit/Core (from `http://github.com/expo/expo.git`, tag `ios/2.8.4`)
@@ -271,7 +260,6 @@ DEPENDENCIES:
   - EXSMS (from `../node_modules/expo-sms/ios`)
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
-  - react-native-pdf (from `../node_modules/react-native-pdf`)
   - React/ART (from `../node_modules/react-native`)
   - React/Core (from `../node_modules/react-native`)
   - React/CxxBridge (from `../node_modules/react-native`)
@@ -285,8 +273,6 @@ DEPENDENCIES:
   - React/RCTText (from `../node_modules/react-native`)
   - React/RCTVibration (from `../node_modules/react-native`)
   - React/RCTWebSocket (from `../node_modules/react-native`)
-  - rn-fetch-blob (from `../node_modules/rn-fetch-blob`)
-  - RNShare (from `../node_modules/react-native-share`)
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -315,7 +301,6 @@ SPEC REPOS:
     - GoogleUtilities
     - JKBigInteger2
     - lottie-ios
-    - Stripe
 
 EXTERNAL SOURCES:
   DoubleConversion:
@@ -360,8 +345,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo-location/ios"
   EXMediaLibrary:
     :path: "../node_modules/expo-media-library/ios"
-  EXPaymentsStripe:
-    :path: "../node_modules/expo-payments-stripe/ios"
   EXPermissions:
     :path: "../node_modules/expo-permissions/ios"
   EXPermissionsInterface:
@@ -387,12 +370,6 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
   React:
     :path: "../node_modules/react-native"
-  react-native-pdf:
-    :path: "../node_modules/react-native-pdf"
-  rn-fetch-blob:
-    :path: "../node_modules/rn-fetch-blob"
-  RNShare:
-    :path: "../node_modules/react-native-share"
   yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -431,7 +408,6 @@ SPEC CHECKSUMS:
   EXLocalAuthentication: 9b6263750716482fd5e176093c5b00fd22d4a1ff
   EXLocation: d3826ac9100a338192c9913af353ced1e6fa9a51
   EXMediaLibrary: 1410f21ff08dbc3ee783003b27fcf72ad20bb9c2
-  EXPaymentsStripe: 7b9a230a1ceadd3ef955fca88b5e30d2f35edf6a
   EXPermissions: 1c524493270ba64f494f805b6e0e75d4b498ecb5
   EXPermissionsInterface: 814a15d3259873c39646ed3cfe58bb49160445c1
   ExpoKit: 8bd26597709ed939c5dd6316bd9902b0d406cb3e
@@ -460,12 +436,8 @@ SPEC CHECKSUMS:
   JKBigInteger2: e91672035c42328c48b7dd015b66812ddf40ca9b
   lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
   React: aa2040dbb6f317b95314968021bd2888816e03d5
-  react-native-pdf: de408b5d16850c38fdb017d010b8742883c60be9
-  rn-fetch-blob: 76a8f798dae965bbcd146a2438f2e1d381c91ae3
-  RNShare: d875e8e37f3e5e8eb7a103ae01e06490af1796f6
-  Stripe: 76c203e21555089b708e6cbe972a3e3baf1ab4d8
   yoga: a23273df0088bf7f2bb7e5d7b00044ea57a2a54a
 
-PODFILE CHECKSUM: 6c34e8040765cac3b21985d02c7f26c5cb32bcca
+PODFILE CHECKSUM: 4e71dc2af12b84257a36e652ea281dd9284fb5eb
 
 COCOAPODS: 1.5.3

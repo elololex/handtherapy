@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Mum & Baby",
+    "name": "Hand Therapy",
     "description": "This project is really great.",
-    "slug": "mumandbabypolish",
+    "slug": "handtherapy",
     "privacy": "unlisted",
     "sdkVersion": "30.0.0",
     "platforms": [
@@ -25,9 +25,9 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.imagineear.mumandbabypolish",
-      "publishBundlePath": "ios/mum---baby/Supporting/shell-app.bundle",
-      "publishManifestPath": "ios/mum---baby/Supporting/shell-app-manifest.json",
+      "bundleIdentifier": "com.imagineear.handtherapy",
+      "publishBundlePath": "ios/hand-therapy/Supporting/shell-app.bundle",
+      "publishManifestPath": "ios/hand-therapy/Supporting/shell-app-manifest.json",
       "config": {
         "googleSignIn": {
           "reservedClientId": "com.googleusercontent.apps.145027294735-6g2076uorogpth72aones7ajsre6b0es"
@@ -41,7 +41,7 @@
     },
     "scheme": "exp3d7bf441182c49b8b5bcd2304e26110f",
     "android": {
-      "package": "com.imagineear.mumandbabypolish",
+      "package": "com.imagineear.handtherapy",
       "publishBundlePath": "android/app/src/main/assets/shell-app.bundle",
       "publishManifestPath": "android/app/src/main/assets/shell-app-manifest.json",
       "config": {
