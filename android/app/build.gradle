@@ -99,6 +99,10 @@ apply from: 'expo.gradle'
 
 
 dependencies {
+    compile project(':react-native-share')
+    compile project(':rn-fetch-blob')
+    compile project(':react-native-pdf')
+    compile project(':react-native-html-to-pdf')
   implementation fileTree(dir: 'libs', include: ['*.jar'])
 
   implementation 'com.android.support:multidex:1.0.1'

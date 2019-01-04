@@ -7,13 +7,13 @@ class User {
 	static getCurrentPage() {
         return this.currentPage;
     }
-    static setCurrentPage(str:String) {
+    static setCurrentPage(str) {
         this.currentPage = str;
     }
     static getCurrentUser() {
         return this.currentUser;
     }
-    static setCurrentUser(str:String) {
+    static setCurrentUser(str) {
         this.currentUser = str;
     }
 }

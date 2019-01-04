@@ -206,7 +206,7 @@ const MainMenuNavigation = createDrawerNavigator({
   }),
   MaternityUnitsMenu:{screen:MaternityUnitsStack,
     navigationOptions: {
-      drawerLabel: 'Maternity units',
+      drawerLabel: 'My Exercises',
       drawerIcon: () => (
         <Image
                 source={require('./assets/images/hospital_icon.png')}
@@ -214,18 +214,8 @@ const MainMenuNavigation = createDrawerNavigator({
             />
       )
     }},
-  PersonalCarePlan:{screen:PersonalCarePlanScreen, Title: "Personal Care Plan",  navigationOptions: {
-    drawerLabel: 'Personal care plans ',
-    drawerIcon: () => (
-      
-      <Image
-                source={require('./assets/images/identy_icon.png')}
-                style={{height:16, width:23}}
-            />
-    )
-  }},
   AppointmentsMenu:{screen:AppointmentStack,  navigationOptions: {
-    drawerLabel: 'Appointments',
+    drawerLabel: 'All Exercises',
     drawerIcon: () => (
       <Image
                 source={require('./assets/images/calendar_icon.png')}
@@ -234,7 +224,7 @@ const MainMenuNavigation = createDrawerNavigator({
     )
   }},
   YourPregnancy: {screen:YourPregnancyScreen,  navigationOptions: {
-    drawerLabel: 'Your pregnancy ',
+    drawerLabel: 'Remind Me ',
     drawerIcon: () => (
       <Image
                 source={require('./assets/images/preg_icon.png')}
@@ -243,7 +233,7 @@ const MainMenuNavigation = createDrawerNavigator({
     )
   }},
   LabourAndBirth: {screen:BirthScreen,  navigationOptions: {
-    drawerLabel: 'Labour and birth ',
+    drawerLabel: 'Progress ',
     drawerIcon: () => (
       
       <Image
@@ -252,53 +242,35 @@ const MainMenuNavigation = createDrawerNavigator({
             />
     )
   }},
-  AfterYourBabyIsBorn: {screen:AfterYourBabyIsBornScreen,  navigationOptions: {
-    drawerLabel: 'After your baby is born ',
+  PersonalCarePlan:{screen:PersonalCarePlanScreen, Title: "Personal Care Plan",  navigationOptions: {
+    drawerLabel: 'Leaflets ',
     drawerIcon: () => (
+      
       <Image
-                source={require('./assets/images/baby_icon.png')}
-                style={{height:27, width:21}}
+                source={require('./assets/images/identy_icon.png')}
+                style={{height:16, width:23}}
             />
     )
   }},
-  Backup:{ screen : BackupScreen,navigationOptions: {
-      drawerLabel: ()=>{
-        return(
-          <Text style={{color:'#999999'}}>Backup </Text>
-        )
-      }
+  Donation:{screen:DonationScreen,  navigationOptions: {
+    drawerLabel: 'Donate ',
+    drawerIcon: () => (
+      
+      <Image
+                source={require('./assets/images/birth_icon.png')}
+                style={{height:26, width:21}}
+            />
+    )
   }},
   AboutTheApp:{screen:AboutTheAppScreen,  navigationOptions: {
-    drawerLabel: 
-    ()=>{
-      return(
-        <Text style={{color:'#999999'}}>About this app </Text>
-      )
-    }
-  }},
-  GetInvolved:{screen:GetInvolvedScreen,  navigationOptions: {
-      drawerLabel: 
-      ()=>{
-        return(
-          <Text style={{color:'#999999'}}>Get involved </Text>
-        )
-      },
-    }},
-  Feedback:{screen:FeedbackScreen,  navigationOptions: {
-    drawerLabel: 
-    ()=>{
-      return(
-        <Text style={{color:'#999999'}}>Feedback </Text>
-      )
-    },
-  }},
-  Donation:{screen:DonationScreen,  navigationOptions: {
-    drawerLabel: 
-    ()=>{
-      return(
-        <Text style={{color:'#999999'}}>Donations </Text>
-      )
-    },
+    drawerLabel: 'About ',
+    drawerIcon: () => (
+      
+      <Image
+                source={require('./assets/images/birth_icon.png')}
+                style={{height:26, width:21}}
+            />
+    )
   }},
  },{
   initialRouteName: 

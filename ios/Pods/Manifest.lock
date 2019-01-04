@@ -179,6 +179,8 @@ PODS:
   - lottie-ios (2.5.2)
   - React (0.55.4):
     - React/Core (= 0.55.4)
+  - react-native-pdf (5.0.8):
+    - React
   - React/ART (0.55.4):
     - React/Core
   - React/Core (0.55.4):
@@ -225,6 +227,10 @@ PODS:
     - React/Core
     - React/fishhook
     - React/RCTBlob
+  - rn-fetch-blob (0.10.6):
+    - React/Core
+  - RNShare (1.1.3):
+    - React
   - yoga (0.55.4.React)
 
 DEPENDENCIES:
@@ -260,6 +266,7 @@ DEPENDENCIES:
   - EXSMS (from `../node_modules/expo-sms/ios`)
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - react-native-pdf (from `../node_modules/react-native-pdf`)
   - React/ART (from `../node_modules/react-native`)
   - React/Core (from `../node_modules/react-native`)
   - React/CxxBridge (from `../node_modules/react-native`)
@@ -273,6 +280,8 @@ DEPENDENCIES:
   - React/RCTText (from `../node_modules/react-native`)
   - React/RCTVibration (from `../node_modules/react-native`)
   - React/RCTWebSocket (from `../node_modules/react-native`)
+  - rn-fetch-blob (from `../node_modules/rn-fetch-blob`)
+  - RNShare (from `../node_modules/react-native-share`)
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -370,6 +379,12 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
   React:
     :path: "../node_modules/react-native"
+  react-native-pdf:
+    :path: "../node_modules/react-native-pdf"
+  rn-fetch-blob:
+    :path: "../node_modules/rn-fetch-blob"
+  RNShare:
+    :path: "../node_modules/react-native-share"
   yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -436,8 +451,11 @@ SPEC CHECKSUMS:
   JKBigInteger2: e91672035c42328c48b7dd015b66812ddf40ca9b
   lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
   React: aa2040dbb6f317b95314968021bd2888816e03d5
+  react-native-pdf: de408b5d16850c38fdb017d010b8742883c60be9
+  rn-fetch-blob: 76a8f798dae965bbcd146a2438f2e1d381c91ae3
+  RNShare: d875e8e37f3e5e8eb7a103ae01e06490af1796f6
   yoga: a23273df0088bf7f2bb7e5d7b00044ea57a2a54a
 
-PODFILE CHECKSUM: 4e71dc2af12b84257a36e652ea281dd9284fb5eb
+PODFILE CHECKSUM: d6702c08097fd001e7cdd91473eb8bbf36baf26e
 
 COCOAPODS: 1.5.3
