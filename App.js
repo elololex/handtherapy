@@ -30,6 +30,9 @@ import SearchResultsScreen from './screens/SearchResultsScreen';
 import SearchBrokerScreen from './screens/searchStack/SearchBroker';
 //screen
 import AppointmentScreen from './screens/AppointmentsScreen';
+import ReminderScreen from './screens/Reminder';
+import ProgressScreen from './screens/Progress';
+import MyExerciseScreen from './screens/Myexercises';
 import AddAppointmentScreen from './screens/appointment_stack/AddAppointment';
 import ViewAppointmentScreen from './screens/appointment_stack/ViewAppointments';
 import EditAppointmentScreen from './screens/appointment_stack/EditAppointment';
@@ -204,7 +207,7 @@ const MainMenuNavigation = createDrawerNavigator({
       screen: SearchResultsScreen
     }
   }),
-  MaternityUnitsMenu:{screen:MaternityUnitsStack,
+  MyExerciseScreen:{screen:MyExerciseScreen,
     navigationOptions: {
       drawerLabel: 'My Exercises',
       drawerIcon: () => (
@@ -214,7 +217,7 @@ const MainMenuNavigation = createDrawerNavigator({
             />
       )
     }},
-  AppointmentsMenu:{screen:AppointmentStack,  navigationOptions: {
+  AppointmentsMenu:{screen:BirthScreen,  navigationOptions: {
     drawerLabel: 'All Exercises',
     drawerIcon: () => (
       <Image
@@ -223,8 +226,8 @@ const MainMenuNavigation = createDrawerNavigator({
             />
     )
   }},
-  YourPregnancy: {screen:YourPregnancyScreen,  navigationOptions: {
-    drawerLabel: 'Remind Me ',
+  ReminderScreen: {screen:ReminderScreen,  navigationOptions: {
+    drawerLabel: 'Remind Me',
     drawerIcon: () => (
       <Image
                 source={require('./assets/images/preg_icon.png')}
@@ -232,7 +235,7 @@ const MainMenuNavigation = createDrawerNavigator({
             />
     )
   }},
-  LabourAndBirth: {screen:BirthScreen,  navigationOptions: {
+  ProgressScreen: {screen:ProgressScreen,  navigationOptions: {
     drawerLabel: 'Progress ',
     drawerIcon: () => (
       
