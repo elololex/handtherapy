@@ -238,7 +238,7 @@ const styles = StyleSheet.create(
   /* The header config from HomeScreen is now here */
  /* navigationOptions: ({navigation, screenProps }) => ({
     headerStyle: {
-      backgroundColor: '#FA7E5B',
+      backgroundColor: '#2CBBFF',
     },
     headerBackTitle: null,
     headerTintColor: '#fff',

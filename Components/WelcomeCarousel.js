@@ -131,7 +131,7 @@ export default class WelcomeCarousel extends React.Component {
                   height: 10,
                   borderRadius: 5,
                   marginHorizontal: 8,
-                  backgroundColor: '#FA7E5B'
+                  backgroundColor: '#2CBBFF'
               }}
               inactiveDotStyle={{
                   // Define styles for inactive dots here

@@ -60,7 +60,7 @@ static navigationOptions = ({navigation}) => {
         const htmlGenerator = new htmlFormRender(this.state.pagekey,json[0].content.rendered);
         const abouthtmlGenerator = new htmlFormRender('about-me',aboutmeJson[0].content.rendered,15);
         const mainFormTitle = await htmlGenerator.getTitle();
-        mainFormTitle = `<h1 style="background-color:#FA7E5B; font-size: 28px;">mum and baby</h1>`+ mainFormTitle;
+        mainFormTitle = `<h1 style="background-color:#2CBBFF; font-size: 28px;">mum and baby</h1>`+ mainFormTitle;
         const mainFormHTML = await htmlGenerator.generateHTML();
         const aboutFormHTML = await abouthtmlGenerator.generateHTML();
         
@@ -186,7 +186,7 @@ static navigationOptions = ({navigation}) => {
                   console.log(error);
               }}
               style={styles.pdf}/> 
-            {/* <View style={{position:'absolute',right:20,bottom:20, backgroundColor:'#FA7E5B',width:60,height:60,borderRadius:50, justifyContent:"center",alignItems:'center'}}>
+            {/* <View style={{position:'absolute',right:20,bottom:20, backgroundColor:'#2CBBFF',width:60,height:60,borderRadius:50, justifyContent:"center",alignItems:'center'}}>
               <Icon name='print' style={{color:'#fff', padding:10}} onPress={async()=>{
                 try{
                   let results = await Expo.Print.printAsync({uri:this.state.pdfPath});
@@ -206,7 +206,7 @@ static navigationOptions = ({navigation}) => {
         return (
             <View style={styles.container}>
               <View style={{flex:1,justifyContent: 'center',alignContent:'center'}}>
-              <ActivityIndicator size="large" color="#FA7E5B" />
+              <ActivityIndicator size="large" color="#2CBBFF" />
 
               </View>
 

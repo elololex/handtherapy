@@ -15,8 +15,8 @@ import DefaultContentScreen from "./screens/DefaultContentScreen";
 // import AppointmentsScreen from './screens/AppointmentsScreen';
 import BackupScreen from './screens/BackupScreen';
 import PersonalCarePlanScreen from './screens/PersonalCarePlanScreen';
-import YourPregnancyScreen from './screens/YourPregnancyScreen';
-import BirthScreen from './screens/BirthScreen';
+import LeafletScreen from './screens/LeafletScreen';
+import AllExerciseScreen from './screens/AllExerciseScreen';
 import AfterYourBabyIsBornScreen from './screens/AfterYourBabyIsBornScreen';
 import AboutTheAppScreen from './screens/AboutTheAppScreen';
 import GetInvolvedScreen from './screens/GetInvolvedScreen';
@@ -39,11 +39,11 @@ import EditAppointmentScreen from './screens/appointment_stack/EditAppointment';
 import SearchBrookerScreen from './screens/searchStack/SearchBroker';
 
 //Menu
-const mainColor =  '#f98267';
+const mainColor =  '#2CBBFF';
   const CustomContentComponent = (props)=>{
     return (
       <View style={{flex:1}}>
-      <View style={{height:150,  backgroundColor:'#f98267', alignItems:'center',
+      <View style={{height:150,  backgroundColor:'#2CBBFF', alignItems:'center',
         justifyContent:'center',}} searchBar rounded>
       <View style={{flex:1,alignItems:'center', justifyContent:'flex-end'}}>
       <Image
@@ -122,7 +122,7 @@ const AppointmentStack = createStackNavigator({
       headerMode: 'float',
     navigationOptions: ({navigation, screenProps }) => ({
       headerStyle: {
-        backgroundColor: '#FA7E5B',
+        backgroundColor: '#2CBBFF',
       },
       headerBackTitle: null,
       headerTintColor: '#fff',
@@ -167,7 +167,7 @@ const AppointmentStack = createStackNavigator({
         headerMode: 'float',
       navigationOptions: ({navigation, screenProps }) => ({
         headerStyle: {
-          backgroundColor: '#FA7E5B',
+          backgroundColor: '#2CBBFF',
         },
         headerBackTitle: null,
         headerTintColor: '#fff',
@@ -217,7 +217,7 @@ const MainMenuNavigation = createDrawerNavigator({
             />
       )
     }},
-  AppointmentsMenu:{screen:BirthScreen,  navigationOptions: {
+    AllExerciseScreen:{screen:AllExerciseScreen,  navigationOptions: {
     drawerLabel: 'All Exercises',
     drawerIcon: () => (
       <Image
@@ -245,7 +245,7 @@ const MainMenuNavigation = createDrawerNavigator({
             />
     )
   }},
-  PersonalCarePlan:{screen:PersonalCarePlanScreen, Title: "Personal Care Plan",  navigationOptions: {
+  LeafletsScreen:{screen:LeafletScreen, Title: "Personal Care Plan",  navigationOptions: {
     drawerLabel: 'Leaflets ',
     drawerIcon: () => (
       
@@ -255,7 +255,7 @@ const MainMenuNavigation = createDrawerNavigator({
             />
     )
   }},
-  Donation:{screen:DonationScreen,  navigationOptions: {
+  DonationScreen:{screen:DonationScreen,  navigationOptions: {
     drawerLabel: 'Donate ',
     drawerIcon: () => (
       
@@ -265,7 +265,7 @@ const MainMenuNavigation = createDrawerNavigator({
             />
     )
   }},
-  AboutTheApp:{screen:AboutTheAppScreen,  navigationOptions: {
+  AboutTheAppScreen:{screen:AboutTheAppScreen,  navigationOptions: {
     drawerLabel: 'About ',
     drawerIcon: () => (
       

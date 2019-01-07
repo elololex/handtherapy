@@ -25,7 +25,7 @@ import ViewAppointmentScreen from './appointment_stack/ViewAppointments';
 import EditAppointmentScreen from './appointment_stack/EditAppointment';
 import SubMenuItem from '../Components/SubMenuItem';
 
-const mainColor =  '#f98267';
+const mainColor =  '#2CBBFF';
 
 class SearchResultsScreen extends React.Component {
 	
@@ -192,7 +192,7 @@ class SearchResultsScreen extends React.Component {
           
         }
         else{
-          let tempColor = "#FA7E5B";
+          let tempColor = "#2CBBFF";
           return(
             <View style={[styles.container, styles.horizontal]}>
                 <ActivityIndicator size="large" color= {tempColor}/>
@@ -257,7 +257,7 @@ export default createStackNavigator({
                 </Button>
             ),    
             headerStyle: {
-                backgroundColor: '#FA7E5B',
+                backgroundColor: '#2CBBFF',
                 
               },
               headerTintColor: '#fff',
@@ -276,7 +276,7 @@ export default createStackNavigator({
                 </Button>
             ),    
             headerStyle: {
-                backgroundColor: '#FA7E5B',
+                backgroundColor: '#2CBBFF',
                 
               },
               headerTintColor: '#fff',
@@ -302,7 +302,7 @@ export default createStackNavigator({
                 </Button>
             ),    
             headerStyle: {
-                backgroundColor: '#FA7E5B',
+                backgroundColor: '#2CBBFF',
                 
               },
               headerTintColor: '#fff',
@@ -319,7 +319,7 @@ export default createStackNavigator({
                 </Button>
             ),    
             headerStyle: {
-                backgroundColor: '#FA7E5B',
+                backgroundColor: '#2CBBFF',
                 
               },
               headerTintColor: '#fff',
@@ -336,7 +336,7 @@ export default createStackNavigator({
                 </Button>
             ),    
             headerStyle: {
-                backgroundColor: '#FA7E5B',
+                backgroundColor: '#2CBBFF',
                 
               },
               headerTintColor: '#fff',
@@ -353,7 +353,7 @@ export default createStackNavigator({
                 </Button>
             ),    
             headerStyle: {
-                backgroundColor: '#FA7E5B',
+                backgroundColor: '#2CBBFF',
                 
               },
               headerTintColor: '#fff',
@@ -374,7 +374,7 @@ export default createStackNavigator({
   /* The header config from HomeScreen is now here */
   navigationOptions: ({navigation, screenProps }) => ({
     headerStyle: {
-      backgroundColor: '#FA7E5B',
+      backgroundColor: '#2CBBFF',
     },
     headerBackTitle: null,
     headerTintColor: '#fff',

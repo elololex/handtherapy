@@ -9,7 +9,7 @@ import DefaultContent from './DefaultContentScreen';
 import FormScreen from './FormScreen';
 var stringSimilarity = require('string-similarity');
 //const util = require('util');
-const mainColor =  '#f98267';
+const mainColor =  '#2CBBFF';
 
 class SearchResultsScreen extends React.Component {
 	
@@ -133,7 +133,7 @@ export default createStackNavigator({
   /* The header config from HomeScreen is now here */
   navigationOptions: ({navigation, screenProps }) => ({
     headerStyle: {
-      backgroundColor: '#FA7E5B',
+      backgroundColor: '#2CBBFF',
     },
     headerBackTitle: null,
     headerTintColor: '#fff',

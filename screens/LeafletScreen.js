@@ -23,7 +23,7 @@ class YourPregnancyScreen extends React.Component {
 	
     
     static navigationOptions =({navigation, screenProps }) => ( {
-      title: 'Your pregnancy',
+      title: 'Leaflets',
       headerTitleStyle: {
         fontFamily: 'Lato-Regular',
         textAlign: 'center',
@@ -39,10 +39,10 @@ class YourPregnancyScreen extends React.Component {
         ),
         headerRight: (
             
-          <Image
-                source={require('../assets/images/beforebirth_topicon.png')}
-                style={{height:50, width:50}}
-            />
+          <Button transparent
+          >
+            <Icon ios='ios-search' android="md-search" style={{fontSize: 30, color: 'white'}}/>
+          </Button>
       ),
     });
     componentDidMount(){
@@ -115,7 +115,7 @@ export default createStackNavigator({
                 </Button>
             ),    
             headerStyle: {
-                backgroundColor: '#FA7E5B',
+                backgroundColor: '#2CBBFF',
                 
               },
               headerTintColor: '#fff',
@@ -134,7 +134,7 @@ export default createStackNavigator({
                 </Button>
             ),    
             headerStyle: {
-                backgroundColor: '#FA7E5B',
+                backgroundColor: '#2CBBFF',
                 
               },
               headerTintColor: '#fff',
@@ -160,7 +160,7 @@ export default createStackNavigator({
                 </Button>
             ),    
             headerStyle: {
-                backgroundColor: '#FA7E5B',
+                backgroundColor: '#2CBBFF',
                 
               },
               headerTintColor: '#fff',
@@ -177,7 +177,7 @@ export default createStackNavigator({
                 </Button>
             ),    
             headerStyle: {
-                backgroundColor: '#FA7E5B',
+                backgroundColor: '#2CBBFF',
                 
               },
               headerTintColor: '#fff',
@@ -194,7 +194,7 @@ export default createStackNavigator({
                 </Button>
             ),    
             headerStyle: {
-                backgroundColor: '#FA7E5B',
+                backgroundColor: '#2CBBFF',
                 
               },
               headerTintColor: '#fff',
@@ -211,7 +211,7 @@ export default createStackNavigator({
                 </Button>
             ),    
             headerStyle: {
-                backgroundColor: '#FA7E5B',
+                backgroundColor: '#2CBBFF',
                 
               },
               headerTintColor: '#fff',
@@ -232,7 +232,7 @@ export default createStackNavigator({
   /* The header config from HomeScreen is now here */
   navigationOptions: ({navigation, screenProps }) => ({
     headerStyle: {
-      backgroundColor: '#FA7E5B',
+      backgroundColor: '#2CBBFF',
     },
     headerBackTitle: null,
     headerTintColor: '#fff',

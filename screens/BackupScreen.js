@@ -40,7 +40,7 @@ const backupKeys =
 import RestoreScreen from './backup_stack/RestoreScreen';
 import CreateContent from '../Components/CreateContent';
 const colors  = {
-    main : '#f98267'
+    main : '#2CBBFF'
 }
  class BackupScreen extends Component {
     static navigationOptions =({navigation, screenProps }) => ( {
@@ -343,8 +343,8 @@ const colors  = {
     shadowOpacity: 0.5,
     shadowRadius: 4,
     elevation: 1}}> 
-          <ActivityIndicator size="large" color="#FA7E5B" />
-            <Text style={{fontSize:18,color:"#FA7E5B", marginTop:10}}>Processing Request...</Text>
+          <ActivityIndicator size="large" color="#2CBBFF" />
+            <Text style={{fontSize:18,color:"#2CBBFF", marginTop:10}}>Processing Request...</Text>
             </View> 
 
           </View>
@@ -387,7 +387,7 @@ export default createStackNavigator({
   /* The header config from HomeScreen is now here */
   navigationOptions: ({navigation, screenProps }) => ({
     headerStyle: {
-      backgroundColor: '#FA7E5B',
+      backgroundColor: '#2CBBFF',
     },
     headerBackTitle: null,
     headerTintColor: '#fff',

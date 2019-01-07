@@ -211,7 +211,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         height:120,
         width:null,
-       borderBottomColor: '#FA7E5B',
+       borderBottomColor: '#2CBBFF',
         borderBottomWidth: 1,
       },
       subitemText: {
@@ -236,7 +236,7 @@ const styles = StyleSheet.create({
         textAlign: 'left',
       },
       internalLink: {
-        backgroundColor:'#FA7E5B',
+        backgroundColor:'#2CBBFF',
         flexGrow:1,
         height:null,
         width:null,
@@ -254,7 +254,7 @@ const styles = StyleSheet.create({
     
     const styles2 = StyleSheet.create({
         default: {
-            color: '#FA7E5B',
+            color: '#2CBBFF',
             fontFamily: 'Merriweather-Regular',
             fontSize: 14,
         },
@@ -280,13 +280,13 @@ const styles = StyleSheet.create({
             fontFamily: 'Lato-Light',
         },
         ol:{
-            color: '#FA7E5B',
+            color: '#2CBBFF',
             fontFamily: 'Lato-Regular',
     
         },
         
         ul: {
-            color: '#FA7E5B',
+            color: '#2CBBFF',
             fontFamily: 'Lato-Light',
         },
         li: {

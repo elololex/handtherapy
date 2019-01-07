@@ -781,7 +781,7 @@ const styles = StyleSheet.create({
 		width:331,
 	},
 	default: {
-		color: '#FA7E5B',
+		color: '#2CBBFF',
 		fontFamily: 'Lato-Light',
 		fontSize: 14,
 	},
@@ -807,7 +807,7 @@ relatedLinksBar: {
     flexDirection: 'row',
     height:120,
     width:null,
-   borderTopColor: '#FA7E5B',
+   borderTopColor: '#2CBBFF',
     borderTopWidth: 1,
   },
   subitemText: {
@@ -832,7 +832,7 @@ relatedLinksBar: {
     textAlign: 'left',
   },
   internalLink: {
-    backgroundColor:'#FA7E5B',
+    backgroundColor:'#2CBBFF',
     flexGrow:1,
     height:null,
     width:null,

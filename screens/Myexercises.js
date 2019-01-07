@@ -11,7 +11,7 @@ import DefaultContent from './DefaultContentScreen';
 class ExercisesScreen extends React.Component {
 	
     static navigationOptions =({navigation, screenProps }) => ( {
-        title: 'Progress',
+        title: 'My Exercises',
         headerTitleStyle: {
             fontFamily: 'Lato-Regular',
             textAlign: 'center',
@@ -83,7 +83,7 @@ export default createStackNavigator({
   /* The header config from HomeScreen is now here */
   navigationOptions: ({navigation, screenProps }) => ({
     headerStyle: {
-      backgroundColor: '#FA7E5B',
+      backgroundColor: '#2CBBFF',
     },
     headerBackTitle: null,
     headerTintColor: '#fff',

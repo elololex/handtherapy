@@ -99,6 +99,7 @@ apply from: 'expo.gradle'
 
 
 dependencies {
+    compile project(':react-native-picker')
     compile project(':react-native-share')
     compile project(':rn-fetch-blob')
     compile project(':react-native-pdf')

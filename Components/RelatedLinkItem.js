@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     
     const styles2 = StyleSheet.create({
         default: {
-            color: '#FA7E5B',
+            color: '#2CBBFF',
             fontFamily: 'Merriweather-Regular',
             fontSize: 14,
         },
@@ -171,13 +171,13 @@ const styles = StyleSheet.create({
             fontFamily: 'Lato-Light',
         },
         ol:{
-            color: '#FA7E5B',
+            color: '#2CBBFF',
             fontFamily: 'Lato-Regular',
     
         },
         
         ul: {
-            color: '#FA7E5B',
+            color: '#2CBBFF',
             fontFamily: 'Lato-Light',
         },
         li: {

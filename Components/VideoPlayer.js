@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
       },
     videoTopTitle:{
-        color: '#FA7E5B',
+        color: '#2CBBFF',
         fontSize: 14,
         paddingBottom: 4,
         fontFamily: 'Lato-Semibold',

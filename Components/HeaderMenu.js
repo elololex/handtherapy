@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { StyleSheet, Text, View ,SafeAreaView, ScrollView, Image,FlatList,TouchableOpacity,AsyncStorage} from 'react-native';
 import {createStackNavigator,createDrawerNavigator,createSwitchNavigator , DrawerItems,NavigationActions} from 'react-navigation';
 import {Header, Item, Icon, Input, InputGroup,List, ListItem,Left,Right,Button} from 'native-base'
-const mainColor =  '#f98267';
+const mainColor =  '#2CBBFF';
 
 
 export default class HeaderMenu extends Component {
@@ -40,23 +40,26 @@ export default class HeaderMenu extends Component {
     
     return (
         <View style={{flex:1}}>
-        <View style={{height:150,  backgroundColor:'#f98267', alignItems:'center',
+        <View style={{height:80,  backgroundColor:'#2CBBFF', alignItems:'center',
           justifyContent:'center',}} searchBar rounded>
 
 
-        <View style={{flex:1,alignItems:'center', justifyContent:'flex-end'}}>
+        <View style={{flex:1,alignItems:'center', justifyContent:'center'}}>
         <TouchableOpacity onPress={()=>{
                 this.props.navigation.toggleDrawer();
                 this.props.navigation.navigate('Home');
               }}>
-        <Image
+              <Text style={{color:'#fff', fontSize:30}}>
+                Navigation
+              </Text>
+        {/* <Image
                   source={require('../assets/images/menu_logo.png')}
                   style={styles.logoImage}
-              />
+              /> */}
                       </TouchableOpacity>
 
         </View>
-        <View style={{flex:1}}>
+        <View style={{flex:1, display:"none"}}>
         <InputGroup rounded style={{backgroundColor:'rgba(255, 255, 255, 0.4)',width:200, height:30,margin:20, borderColor:'rgba(255, 255, 255, 0)'}}>
               <Icon name='search' style={{color:'#fff',fontSize:14}}/>
               <Input 
@@ -81,13 +84,10 @@ export default class HeaderMenu extends Component {
                     await AsyncStorage.setItem('@SEARCH_WORD',this.state.searchEntry);
 
                     this.props.navigation.navigate('SearchBrokerScreen');
-
                   }
                 }catch(err){
 
-                }
-
-                
+                }                
             }}
             placeholder='Search...' 
             placeholderTextColor="#fff" 
@@ -104,12 +104,12 @@ export default class HeaderMenu extends Component {
             </InputGroup>
         </View>
           </View>
-        <ScrollView>
+        <ScrollView style={{backgroundColor:'#666'}}>
         <DrawerItems items={filteredItems} {...rest}
         getLabel = {(scene) => (
-      <View style={{height:40,flexDirection:'row',justifyContent:'center',alignItems:'center', paddingLeft:20}}>
+      <View style={{height:55,flexDirection:'row',justifyContent:'center',alignItems:'center', paddingLeft:20}}>
         {/* <Icon style={{color:mainColor}}  name='bicycle'/> */}
-        <Text style={{ color:mainColor, fontSize:14} }>{this.props.getLabel(scene)}</Text>
+        <Text style={{ color:'#fff', fontSize:18} }>{this.props.getLabel(scene)}</Text>
       </View>
     )}/>
         </ScrollView>

@@ -177,6 +177,10 @@ PODS:
     - GoogleSymbolUtilities (~> 1.1)
   - JKBigInteger2 (0.0.5)
   - lottie-ios (2.5.2)
+  - Picker (4.3.7):
+    - Picker/Core (= 4.3.7)
+  - Picker/Core (4.3.7):
+    - React
   - React (0.55.4):
     - React/Core (= 0.55.4)
   - react-native-pdf (5.0.8):
@@ -266,6 +270,7 @@ DEPENDENCIES:
   - EXSMS (from `../node_modules/expo-sms/ios`)
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - Picker (from `../node_modules/react-native-picker`)
   - react-native-pdf (from `../node_modules/react-native-pdf`)
   - React/ART (from `../node_modules/react-native`)
   - React/Core (from `../node_modules/react-native`)
@@ -377,6 +382,8 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/third-party-podspecs/Folly.podspec"
   glog:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
+  Picker:
+    :path: "../node_modules/react-native-picker"
   React:
     :path: "../node_modules/react-native"
   react-native-pdf:
@@ -450,12 +457,13 @@ SPEC CHECKSUMS:
   GoogleUtilities: 8bbc733218aad26306f9d4a253823986110e3358
   JKBigInteger2: e91672035c42328c48b7dd015b66812ddf40ca9b
   lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
+  Picker: 67a2566d9ff6b141d505d88b9177f905aaa5f1a6
   React: aa2040dbb6f317b95314968021bd2888816e03d5
   react-native-pdf: de408b5d16850c38fdb017d010b8742883c60be9
   rn-fetch-blob: 76a8f798dae965bbcd146a2438f2e1d381c91ae3
   RNShare: d875e8e37f3e5e8eb7a103ae01e06490af1796f6
   yoga: a23273df0088bf7f2bb7e5d7b00044ea57a2a54a
 
-PODFILE CHECKSUM: d6702c08097fd001e7cdd91473eb8bbf36baf26e
+PODFILE CHECKSUM: 86fb6a7fcfc1619881eb4b79226c3c0d9b1892b6
 
 COCOAPODS: 1.5.3

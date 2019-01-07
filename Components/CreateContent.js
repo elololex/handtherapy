@@ -91,7 +91,7 @@ class CreateContent extends React.Component {
     }
     render() {
 				const state = this.state;
-				let tempColor = "#FA7E5B"
+				let tempColor = "#2CBBFF"
 				if(global.useThemeColor == true){
 					global.useThemeColor = false;
 					tempColor = global.themeColor;
@@ -395,7 +395,7 @@ const styles = StyleSheet.create({
 		width:331,
 	},
 	default: {
-		color: '#FA7E5B',
+		color: '#2CBBFF',
 		fontFamily: 'Lato-Light',
 		fontSize: 10,
 	},
@@ -421,7 +421,7 @@ relatedLinksBar: {
     flexDirection: 'row',
     height:120,
     width:null,
-   borderTopColor: '#FA7E5B',
+   borderTopColor: '#2CBBFF',
     borderTopWidth: 1,
   },
   subitemText: {
@@ -446,7 +446,7 @@ relatedLinksBar: {
     textAlign: 'left',
   },
   internalLink: {
-    backgroundColor:'#FA7E5B',
+    backgroundColor:'#2CBBFF',
     flexGrow:1,
     height:null,
     width:null,
@@ -485,7 +485,7 @@ const htmlStyles = StyleSheet.create({
 	subMenu:{
 		paddingTop: 0,
 		paddingBottom: 20,
-		borderTopColor: '#FA7E5B',
+		borderTopColor: '#2CBBFF',
     borderTopWidth: 1,
 	},
 	textComponent:{
@@ -556,7 +556,7 @@ const htmlStyles = StyleSheet.create({
         fontFamily: 'Lato-Bold',
     },
     ol:{
-        color: '#FA7E5B',
+        color: '#2CBBFF',
         fontFamily: 'Lato-Regular',
 
     },
@@ -565,7 +565,7 @@ const htmlStyles = StyleSheet.create({
 			color: '#644D45',
 		},
     ul: {
-        color: '#FA7E5B',
+        color: '#2CBBFF',
         fontFamily: 'Lato-Light',
     },
     li: {

@@ -58,7 +58,7 @@ export default class RetoreScreen extends Component {
                         <Text>{item.name}</Text>  
                         </Left>
                         <Right>
-                        <Button style={{ backgroundColor: "#f98267" }} onPress={
+                        <Button style={{ backgroundColor: "#2CBBFF" }} onPress={
                           ()=>{
                             this._loadFile(item);
                                                       

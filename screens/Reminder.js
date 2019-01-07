@@ -1,12 +1,18 @@
 import React from 'react';
 import {Text,TouchableOpacity, View, AsyncStorage, StyleSheet} from 'react-native';
-import { Container, Header, Left, Body, Right, Button, Icon, Title } from 'native-base';
+import { Container, Header, Left, Body, Right, Button, Icon, Title ,Switch} from 'native-base';
 import {StackNavigator} from "react-navigation";
 import {createStackNavigator,withNavigation, DrawerActions} from 'react-navigation';
 import User from "../Data/User";
 import CreateContent from '../Components/CreateContent';
 import DefaultContent from './DefaultContentScreen';
+import Picker from 'react-native-picker';
+import DatePicker from 'react-native-datepicker'
+
+import moment from 'moment'
 //const util = require('util');
+let data = [];
+
 
 class ReminderScreen extends React.Component {
 	
@@ -33,6 +39,10 @@ class ReminderScreen extends React.Component {
     componentDidMount(){
         var Analytics = require('../Data/Analytics').default;
         Analytics.hitPage('AboutThisApp');
+
+        for(var i=0;i<100;i++){
+            data.push(i);
+        }
     }
    
      
@@ -42,7 +52,63 @@ class ReminderScreen extends React.Component {
         return (
             
                 <View style={ styles.mainContainer}>
-                    {/* <CreateContent style={ styles.topView} slug = {"about-north-west-london"}/> */}
+                    <View style={{flex:1,flexDirection:'row', justifyContent:'space-evenly'}}>
+                        <Text>Every</Text>
+                        <View><Text>1</Text></View>
+                        <Text>Hours</Text>
+                   </View>
+                   <View style={{flex:1,flexDirection:'row', justifyContent:'space-evenly'}}>
+                        <Text>Starting at</Text>
+                        <View>
+
+                <DatePicker
+                mode="time"
+                format="HH:mm"
+                confirmBtnText="Confirm"
+                cancelBtnText="Cancel"
+                showIcon= {false}
+                customStyles={{
+                    dateInput: {
+                        marginLeft: 0,
+                        borderWidth : 0,
+                        alignItems: 'flex-start',
+                        
+                    },
+                    dateText:{
+                        fontSize: 17,
+                fontFamily: 'Lato-Light',textAlign: 'left',
+                    }
+                }}/>
+                                        </View>
+
+                   </View>
+                   <View style={{flex:1,flexDirection:'row', justifyContent:'space-evenly'}}>
+                        <Text>Ending at</Text>
+                        <View>              
+                            <DatePicker
+                mode="time"
+                format="HH:mm"
+                confirmBtnText="Confirm"
+                cancelBtnText="Cancel"
+                showIcon= {false}
+                customStyles={{
+                    dateInput: {
+                        marginLeft: 0,
+                        borderWidth : 0,
+                        alignItems: 'flex-start',
+                        
+                    },
+                    dateText:{
+                        fontSize: 17,
+                fontFamily: 'Lato-Light',textAlign: 'left',
+                    }
+                }}/>
+                </View>
+                   </View>
+                   <View style={{flex:1,flexDirection:'row', justifyContent:'space-evenly'}}>
+                    <Text>Reminders enabled</Text>
+                    <Switch value={true} />
+                    </View>
                 </View>
         );
     }
@@ -83,7 +149,7 @@ export default createStackNavigator({
   /* The header config from HomeScreen is now here */
   navigationOptions: ({navigation, screenProps }) => ({
     headerStyle: {
-      backgroundColor: '#FA7E5B',
+      backgroundColor: '#2CBBFF',
     },
     headerBackTitle: null,
     headerTintColor: '#fff',
