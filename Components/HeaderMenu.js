@@ -40,7 +40,7 @@ export default class HeaderMenu extends Component {
     
     return (
         <View style={{flex:1}}>
-        <View style={{height:80,  backgroundColor:'#2CBBFF', alignItems:'center',
+        <View style={{height:70,  backgroundColor:'#2CBBFF', alignItems:'center',
           justifyContent:'center',}} searchBar rounded>
 
 
@@ -49,8 +49,8 @@ export default class HeaderMenu extends Component {
                 this.props.navigation.toggleDrawer();
                 this.props.navigation.navigate('Home');
               }}>
-              <Text style={{color:'#fff', fontSize:30}}>
-                Navigation
+              <Text style={{color:'#fff', fontSize:25}}>
+                Menu
               </Text>
         {/* <Image
                   source={require('../assets/images/menu_logo.png')}
@@ -59,7 +59,7 @@ export default class HeaderMenu extends Component {
                       </TouchableOpacity>
 
         </View>
-        <View style={{flex:1, display:"none"}}>
+        {/* <View style={{flex:1, display:"none"}}>
         <InputGroup rounded style={{backgroundColor:'rgba(255, 255, 255, 0.4)',width:200, height:30,margin:20, borderColor:'rgba(255, 255, 255, 0)'}}>
               <Icon name='search' style={{color:'#fff',fontSize:14}}/>
               <Input 
@@ -102,7 +102,7 @@ export default class HeaderMenu extends Component {
               <Icon name='close-circle' style={{color:'#fff',fontSize:14}}/>
               </TouchableOpacity>
             </InputGroup>
-        </View>
+        </View> */}
           </View>
         <ScrollView style={{backgroundColor:'#666'}}>
         <DrawerItems items={filteredItems} {...rest}

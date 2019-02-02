@@ -42,7 +42,41 @@ class ProgressScreen extends React.Component {
         return (
             
                 <View style={ styles.mainContainer}>
-                    {/* <CreateContent style={ styles.topView} slug = {"about-north-west-london"}/> */}
+                    <View style={{flex:1}}>
+                        <View style={{flex:0.6,alignItems:'center' ,justifyContent:'space-evenly'}}>
+                            <View style={{width:180,height:180, backgroundColor:'red'}}>
+
+                            </View>
+                            <Text style={{fontSize:25, textAlign:'center'}}>
+                               {` touch "i'm done!" \n after exercising`}
+                            </Text>
+                        </View>
+                        <View style={{flex:0.3,alignItems:'center' ,justifyContent:'space-evenly', backgroundColor:'#f1f1f1'}}>
+                            <Text style={{fontSize:30}}>
+                                Today
+                            </Text>
+                            <View style={{flex:0.5,flexDirection:'row',justifyContent:'space-evenly'}}>
+                                <View style={{flex:0.5, alignItems:'center'}}>
+                                <Text style={{fontSize:20}}>
+                                    Target
+                                </Text>
+                                <Text style={{fontSize:50}}>
+                                    0
+                                </Text>
+                                </View>
+                                <View style={{flex:0.5, alignItems:'center'}}>
+                                <Text style={{fontSize:20}}>
+                                    So far
+                                </Text>
+                                <Text style={{fontSize:50}}>
+                                    0
+                                </Text>
+                                </View>
+
+                            </View>
+                        </View>
+                    </View>
+
                 </View>
         );
     }
@@ -51,6 +85,7 @@ const styles = StyleSheet.create(
     {
        mainContainer:{
         flex:1, 
+        backgroundColor: '#fff', 
        },
        topView:{
         height: 70,

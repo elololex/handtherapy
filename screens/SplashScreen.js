@@ -563,30 +563,32 @@ export default class SplashScreen extends React.Component {
     async removeInitialDate(){
         await AsyncStorage.removeItem('@DateLastStored:key');
     }
-    async loadWelcomeScreen(){
+     loadWelcomeScreen(){
 		try {
-				
-				const value = await AsyncStorage.getItem('@Welcome:key');
-				//console.log("gettin");
-				var {navigate} =  this.props.navigation;
-				if (value !== null) {
-				  // We have data!!
-				  //console.log(value);
-                  console.log("Goto home screen") 
-                  //navigate("Welcome", {title:"temp title", desc: "description text to show what could be shown", image:"test"})
+            var {navigate} =  this.props.navigation;
+			  navigate("ProgressScreen", {title:"temp title", desc: "description text to show what could be shown", image:"test"})
+	
+				// const value = await AsyncStorage.getItem('@Welcome:key');
+				// //console.log("gettin");
+				// var {navigate} =  this.props.navigation;
+				// if (value !== null) {
+				//   // We have data!!
+				//   //console.log(value);
+                //   console.log("Goto home screen") 
+                //   //navigate("Welcome", {title:"temp title", desc: "description text to show what could be shown", image:"test"})
                   
-                  //////////////RESET NEXT FOR LAUNCH//////////////
-                  navigate("Home", {title:"temp title", desc: "description text to show what could be shown", image:"test"})
-				}
-				else{
-					try {
-				await AsyncStorage.setItem('@Welcome:key', 'set');
-				  } catch (error) {
-					// Error saving data
-				  }
-                  console.log("Goto welcome screen")  
-                  navigate("Welcome", {title:"temp title", desc: "description text to show what could be shown", image:"test"})
-				}
+                //   //////////////RESET NEXT FOR LAUNCH//////////////
+                //   navigate("ProgressScreen", {title:"temp title", desc: "description text to show what could be shown", image:"test"})
+				// }
+				// else{
+				// 	try {
+				// await AsyncStorage.setItem('@Welcome:key', 'set');
+				//   } catch (error) {
+				// 	// Error saving data
+				//   }
+                //   console.log("Goto welcome screen")  
+                //   navigate("ProgressScreen", {title:"temp title", desc: "description text to show what could be shown", image:"test"})
+				// }
 				 //this.props.navigation.navigate('ScreenRegister', {title: 'WHATEVER'})
 			} catch (error) {
 				console.log("Error retrieving data" + error);

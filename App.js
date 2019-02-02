@@ -212,8 +212,8 @@ const MainMenuNavigation = createDrawerNavigator({
       drawerLabel: 'My Exercises',
       drawerIcon: () => (
         <Image
-                source={require('./assets/images/hospital_icon.png')}
-                style={{height:20, width:25}}
+                source={require('./assets/images/myexercises_icon.png')}
+                style={{height:25, width:25}}
             />
       )
     }},
@@ -221,8 +221,8 @@ const MainMenuNavigation = createDrawerNavigator({
     drawerLabel: 'All Exercises',
     drawerIcon: () => (
       <Image
-                source={require('./assets/images/calendar_icon.png')}
-                style={{height:24, width:23}}
+                source={require('./assets/images/allexercises_icon.png')}
+                style={{height:25, width:25}}
             />
     )
   }},
@@ -230,8 +230,8 @@ const MainMenuNavigation = createDrawerNavigator({
     drawerLabel: 'Remind Me',
     drawerIcon: () => (
       <Image
-                source={require('./assets/images/preg_icon.png')}
-                style={{height:31, width:18}}
+                source={require('./assets/images/reminder_icon.png')}
+                style={{height:25, width:25}}
             />
     )
   }},
@@ -240,8 +240,8 @@ const MainMenuNavigation = createDrawerNavigator({
     drawerIcon: () => (
       
       <Image
-                source={require('./assets/images/birth_icon.png')}
-                style={{height:26, width:21}}
+                source={require('./assets/images/progress_icon.png')}
+                style={{height:25, width:25}}
             />
     )
   }},
@@ -250,8 +250,8 @@ const MainMenuNavigation = createDrawerNavigator({
     drawerIcon: () => (
       
       <Image
-                source={require('./assets/images/identy_icon.png')}
-                style={{height:16, width:23}}
+                source={require('./assets/images/leaflet_icon.png')}
+                style={{height:25, width:25}}
             />
     )
   }},
@@ -260,8 +260,8 @@ const MainMenuNavigation = createDrawerNavigator({
     drawerIcon: () => (
       
       <Image
-                source={require('./assets/images/birth_icon.png')}
-                style={{height:26, width:21}}
+                source={require('./assets/images/donate_icon.png')}
+                style={{height:25, width:25}}
             />
     )
   }},
@@ -270,14 +270,14 @@ const MainMenuNavigation = createDrawerNavigator({
     drawerIcon: () => (
       
       <Image
-                source={require('./assets/images/birth_icon.png')}
-                style={{height:26, width:21}}
+                source={require('./assets/images/aboutus_icon.png')}
+                style={{height:27, width:25}}
             />
     )
   }},
  },{
   initialRouteName: 
-  'Home',
+  'AboutTheAppScreen',
   contentComponent : (props) => <MainMenuHeader {...props} />
   // contentComponent : props => <CustomContentComponent {...props} />
 });

@@ -30,12 +30,23 @@ class ExercisesScreen extends React.Component {
             <View></View>
         ),
     });
-    componentDidMount(){
-        var Analytics = require('../Data/Analytics').default;
-        Analytics.hitPage('AboutThisApp');
-    }
+
+
+   async loadMyExercises() {
+       try{
+        const value = await AsyncStorage.getItem('@myexercises:key');
+        console.log(value);
+
+       }catch(err){
+           console.log(err)
+       }
+
+   } 
    
-     
+   componentDidMount(){
+    // var Analytics = require('../Data/Analytics').default;
+    // Analytics.hitPage('AboutThisApp');
+    }
     render(){
         const {navigation} = this.props;
         const pageSlug = navigation.getParam('slug', 'NO-ID');
