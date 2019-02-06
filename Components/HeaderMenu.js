@@ -104,10 +104,14 @@ export default class HeaderMenu extends Component {
             </InputGroup>
         </View> */}
           </View>
-        <ScrollView style={{backgroundColor:'#666'}}>
-        <DrawerItems items={filteredItems} {...rest}
+        <ScrollView style={{backgroundColor:'#525c66'}}>
+        <DrawerItems 
+        activeBackgroundColor="#1ba9d5" 
+        activeTintColor = "#fff"
+        inactiveTintColor = "#fff"
+        items={filteredItems} {...rest}
         getLabel = {(scene) => (
-      <View style={{height:55,flexDirection:'row',justifyContent:'center',alignItems:'center', paddingLeft:20}}>
+      <View style={{height:65,flexDirection:'row',justifyContent:'center',alignItems:'center', paddingLeft:20}}>
         {/* <Icon style={{color:mainColor}}  name='bicycle'/> */}
         <Text style={{ color:'#fff', fontSize:18} }>{this.props.getLabel(scene)}</Text>
       </View>

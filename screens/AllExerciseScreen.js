@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text,TouchableOpacity, View, AsyncStorage, StyleSheet, Image} from 'react-native';
-import { Container, Header, Left, Body, Right, Button, Icon, Title } from 'native-base';
+import { Container, Header, Left, Body, Right, Button, Icon, Title,s } from 'native-base';
 import {StackNavigator} from "react-navigation";
 import {createStackNavigator,withNavigation, DrawerActions} from 'react-navigation';
 import User from "../Data/User";
@@ -40,7 +40,9 @@ class AllExerciseScreen extends React.Component {
         ),
         headerRight: (
             
-          <Button transparent
+          <Button transparent onPress={()=>{
+            console.log('search...');
+          }}
           >
             <Icon ios='ios-search' android="md-search" style={{fontSize: 30, color: 'white'}}/>
           </Button>
@@ -58,6 +60,7 @@ class AllExerciseScreen extends React.Component {
         return (
             
                 <View style={ styles.mainContainer}>
+
                     <CreateContent style={ styles.topView} slug = {"labour-and-birth"}/>
                 </View>
         );

@@ -566,7 +566,7 @@ export default class SplashScreen extends React.Component {
      loadWelcomeScreen(){
 		try {
             var {navigate} =  this.props.navigation;
-			  navigate("ProgressScreen", {title:"temp title", desc: "description text to show what could be shown", image:"test"})
+			  navigate("AllExerciseScreen", {title:"temp title", desc: "description text to show what could be shown", image:"test"})
 	
 				// const value = await AsyncStorage.getItem('@Welcome:key');
 				// //console.log("gettin");

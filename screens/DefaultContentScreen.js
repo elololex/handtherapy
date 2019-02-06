@@ -1,5 +1,5 @@
 import React from 'react';
-import {AsyncStorage,TouchableOpacity, Text, View, Image,FlatList,StyleSheet,ScrollView, Dimensions, Button} from 'react-native';
+import {AsyncStorage,TouchableOpacity, Text, View, Image,FlatList,StyleSheet,ScrollView, Dimensions} from 'react-native';
 //const util = require('util');
 import HTMLView from 'react-native-htmlview';
 import { WebView } from 'react-native';
@@ -7,6 +7,7 @@ import User from "../Data/User";
 import CreateContent from '../Components/CreateContent';
 import {StackNavigator} from "react-navigation";
 import {createStackNavigator,withNavigation, DrawerActions} from 'react-navigation';
+import { Footer, FooterTab ,Button} from 'native-base';
 
 
 export default class DefaultContent extends React.Component {
@@ -54,6 +55,7 @@ export default class DefaultContent extends React.Component {
                 this.props.navigation.setParams({replacementTitle: updateDataSource[0].title.rendered});
             }
             
+            return;
             //this.props.navigation.setParams({replacementTopImage: require('../assets/images/beforebirth_topicon.png')});
             console.log("CAT FOUND Test ", updateDataSource[0].categories[0]);
             console.log("CAT FOUND", updateDataSource[0].categories);
@@ -91,8 +93,81 @@ export default class DefaultContent extends React.Component {
 				backgroundColor: 'white'
 			  }}>
                 <CreateContent slug = {pageSlug}/>
+                <FooterTab style={{flex:0.15,backgroundColor:'#525c66'}}>
+              <Button onPress={() => {}} transparent style = {{}}>
+              <View style={styles.footerbuttonLine}>
+                  
+                      <View style={styles.footerTextContainer}>
+                          <Text style = {styles.textStyle}>View Notes</Text>
+                      </View>
+                      
+              </View>
+              </Button>
+              <Button onPress={() => {}} transparent style = {{}}>
+              <View style={styles.footerbuttonLine}>
+                  
+                      <View style={styles.footerTextContainer}>
+                          <Text style = {styles.textStyle}>Add Notes</Text>
+                      </View>
+                      
+              </View>
+              </Button>
+              </FooterTab>
             </View>
         );
     }
-    
 }
+
+const styles = StyleSheet.create({
+horizontal: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    padding: 10
+  },
+  footerbutton: {
+      backgroundColor: global.themeColor,
+      flexGrow:1,
+      flexDirection: 'row',
+      width:null,
+      alignItems: 'center',
+      
+    },
+  footerbuttonLine: {
+      backgroundColor: global.themeColor,
+      flexGrow:1,
+      flexDirection: 'row',
+      width:null,
+      alignItems: 'center',
+      borderRightColor: '#ECFAF7',
+      borderRightWidth: 0.5,
+      
+    },
+  footerImageContainer:{
+      flex:1,
+      alignItems: 'center',
+      justifyContent:'center',
+  },
+  footerItemImage: {
+      height:36,
+      width:36,
+    },
+  footerTextContainer:{
+      flex:4,
+      alignItems: 'center',
+      justifyContent:'center',
+  },
+  footerArrowContainer:{
+      flex:1,
+      alignItems: 'center',
+      justifyContent:'center',
+  },
+  footerArrowImage: {
+      height:14,
+      width:8,
+    },
+  textStyle:{
+      fontFamily: 'Lato-Regular',
+        color: '#fff',
+        fontSize:16
+      }
+    });

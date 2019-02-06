@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text,TouchableOpacity, View, AsyncStorage, StyleSheet} from 'react-native';
+import {Text,TouchableOpacity, View, AsyncStorage, StyleSheet, Image} from 'react-native';
 import { Container, Header, Left, Body, Right, Button, Icon, Title } from 'native-base';
 import {StackNavigator} from "react-navigation";
 import {createStackNavigator,withNavigation, DrawerActions} from 'react-navigation';
@@ -30,6 +30,14 @@ class ProgressScreen extends React.Component {
             <View></View>
         ),
     });
+
+    constructor(props){
+        super(props);
+        
+        this.state = {
+            counter : 0
+        }
+    }
     componentDidMount(){
         var Analytics = require('../Data/Analytics').default;
         Analytics.hitPage('AboutThisApp');
@@ -43,12 +51,23 @@ class ProgressScreen extends React.Component {
             
                 <View style={ styles.mainContainer}>
                     <View style={{flex:1}}>
-                        <View style={{flex:0.6,alignItems:'center' ,justifyContent:'space-evenly'}}>
-                            <View style={{width:180,height:180, backgroundColor:'red'}}>
 
+
+                        <View style={{flex:0.6,alignItems:'center' ,justifyContent:'space-evenly'}}>
+                        <TouchableOpacity onPress={()=>{
+                            this.setState({counter:this.state.counter+1});
+                            console.log('done');
+                        }}>
+                            <View style={{width:180,height:180}}>
+                            <Image
+						        source={require('../assets/images/done_icon.png')}
+                                        style={{ flex:1,width:180, height:180}}
+                                />
                             </View>
+                        </TouchableOpacity>
+
                             <Text style={{fontSize:25, textAlign:'center'}}>
-                               {` touch "i'm done!" \n after exercising`}
+                               {` Touch "i'm done!" \n after exercising`}
                             </Text>
                         </View>
                         <View style={{flex:0.3,alignItems:'center' ,justifyContent:'space-evenly', backgroundColor:'#f1f1f1'}}>
@@ -60,7 +79,7 @@ class ProgressScreen extends React.Component {
                                 <Text style={{fontSize:20}}>
                                     Target
                                 </Text>
-                                <Text style={{fontSize:50}}>
+                                <Text style={{fontSize:50, color:'#1ba9d5'}}>
                                     0
                                 </Text>
                                 </View>
@@ -68,8 +87,8 @@ class ProgressScreen extends React.Component {
                                 <Text style={{fontSize:20}}>
                                     So far
                                 </Text>
-                                <Text style={{fontSize:50}}>
-                                    0
+                                <Text style={{fontSize:50, color:'#1ba9d5'}}>
+                                    {this.state.counter}
                                 </Text>
                                 </View>
 

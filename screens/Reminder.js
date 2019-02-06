@@ -36,6 +36,14 @@ class ReminderScreen extends React.Component {
             <View></View>
         ),
     });
+
+    constructor(props){
+        super(props);
+        
+        this.state = {
+            enableReminder : false
+        }
+    }
     componentDidMount(){
         var Analytics = require('../Data/Analytics').default;
         Analytics.hitPage('AboutThisApp');
@@ -52,62 +60,64 @@ class ReminderScreen extends React.Component {
         return (
             
                 <View style={ styles.mainContainer}>
-                    <View style={{flex:1,flexDirection:'row', justifyContent:'space-evenly'}}>
-                        <Text>Every</Text>
-                        <View><Text>1</Text></View>
-                        <Text>Hours</Text>
-                   </View>
-                   <View style={{flex:1,flexDirection:'row', justifyContent:'space-evenly'}}>
-                        <Text>Starting at</Text>
-                        <View>
+                    <View style={{flex:0.5, justifyContent:'center'}}>
 
-                <DatePicker
-                mode="time"
-                format="HH:mm"
-                confirmBtnText="Confirm"
-                cancelBtnText="Cancel"
-                showIcon= {false}
-                customStyles={{
-                    dateInput: {
-                        marginLeft: 0,
-                        borderWidth : 0,
-                        alignItems: 'flex-start',
-                        
-                    },
-                    dateText:{
-                        fontSize: 17,
-                fontFamily: 'Lato-Light',textAlign: 'left',
-                    }
-                }}/>
-                                        </View>
+                        <View style={{flexDirection:'row', alignItems:"center",justifyContent:"center"}}>
+                            <Text>Every</Text>
+                            <View><Text>1</Text></View>
+                            <Text>Hours</Text>
+                        </View>
+                        <View style={{flexDirection:'row', alignItems:"center",justifyContent:"center"}}>
+                            <Text>Starting at</Text>
+                            <View>
+                                <DatePicker
+                                mode="time"
+                                format="HH:mm"
+                                confirmBtnText="Confirm"
+                                cancelBtnText="Cancel"
+                                showIcon= {false}
+                                customStyles={{
+                                    dateInput: {
+                                        marginLeft: 0,
+                                        borderWidth : 0,
+                                        alignItems: 'flex-start',
+                                        
+                                    },
+                                    dateText:{
+                                        fontSize: 17,
+                                fontFamily: 'Lato-Light',textAlign: 'left',
+                                    }
+                                }}/>
+                            </View>
+                        </View>
+                        <View style={{flexDirection:'row', alignItems:"center",justifyContent:"center"}}>
+                            <Text>Ending at</Text>
+                            <View>              
+                                <DatePicker
+                                mode="time"
+                                format="HH:mm"
+                                confirmBtnText="Confirm"
+                                cancelBtnText="Cancel"
+                                showIcon= {false}
+                                customStyles={{
+                                    dateInput: {
+                                        marginLeft: 0,
+                                        borderWidth : 0,
+                                        alignItems: 'flex-start',
+                                        
+                                    },
+                                    dateText:{
+                                        fontSize: 17,
+                                fontFamily: 'Lato-Light',textAlign: 'left',
+                                    }
+                                }}/>
+                            </View>
+                        </View>
+                   </View>
 
-                   </View>
-                   <View style={{flex:1,flexDirection:'row', justifyContent:'space-evenly'}}>
-                        <Text>Ending at</Text>
-                        <View>              
-                            <DatePicker
-                mode="time"
-                format="HH:mm"
-                confirmBtnText="Confirm"
-                cancelBtnText="Cancel"
-                showIcon= {false}
-                customStyles={{
-                    dateInput: {
-                        marginLeft: 0,
-                        borderWidth : 0,
-                        alignItems: 'flex-start',
-                        
-                    },
-                    dateText:{
-                        fontSize: 17,
-                fontFamily: 'Lato-Light',textAlign: 'left',
-                    }
-                }}/>
-                </View>
-                   </View>
-                   <View style={{flex:1,flexDirection:'row', justifyContent:'space-evenly'}}>
-                    <Text>Reminders enabled</Text>
-                    <Switch value={true} />
+                   <View style={{flexDirection:'row', justifyContent:'space-evenly'}}>
+                        <Text>Reminders enabled</Text>
+                        <Switch onTintColor='#525c66' onValueChange={(val)=>{this.setState({enableReminder:val})}} value={this.state.enableReminder} />
                     </View>
                 </View>
         );
@@ -117,6 +127,7 @@ const styles = StyleSheet.create(
     {
        mainContainer:{
         flex:1, 
+        backgroundColor: '#fff', 
        },
        topView:{
         height: 70,

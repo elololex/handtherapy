@@ -22,6 +22,7 @@ import AboutTheAppScreen from './screens/AboutTheAppScreen';
 import GetInvolvedScreen from './screens/GetInvolvedScreen';
 import FeedbackScreen from './screens/FeedbackScreen';
 import DonationScreen from './screens/DonationScreen';
+import NotesScreen from './screens/NotesScreen';
 
 //header 
 import MainMenuHeader from './Components/HeaderMenu';
@@ -89,52 +90,6 @@ const mainColor =  '#2CBBFF';
       },
     });
 
-    //Appointment Stackl
-const AppointmentStack = createStackNavigator({
-  AppointmentScreen : {
-    screen:AppointmentScreen,
-    navigationOptions : ({navigation})=>({
-      title: 'Appointments',
-      drawerLabel: 'Home',
-      headerTitleStyle: {
-        fontFamily: 'Lato-Regular',
-        textAlign: 'center',
-        flexGrow:1,
-        alignSelf:'center',
-    },
-      drawerIcon: ({ tintColor }) => (
-        <Icon
-          name=''
-        />
-      ),
-      headerLeft: (
-          <Button transparent
-          onPress={() => navigation.openDrawer()}>
-            <Icon ios='ios-menu' android="md-menu" style={{fontSize: 30, color: 'white'}}/>
-          </Button>
-      )
-    }),
-  },
-  AddAppointmentScreen : {screen:AddAppointmentScreen},
-  ViewAppointmentScreen : {screen:ViewAppointmentScreen},
-  EditAppointmentScreen : {screen:EditAppointmentScreen}
-},{
-      headerMode: 'float',
-    navigationOptions: ({navigation, screenProps }) => ({
-      headerStyle: {
-        backgroundColor: '#2CBBFF',
-      },
-      headerBackTitle: null,
-      headerTintColor: '#fff',
-      headerMode: 'screen',
-      headerTitleStyle: {
-        fontFamily: 'Lato-Regular',
-        textAlign: 'center',
-        flexGrow:1,
-        alignSelf:'center',
-    },
-    })
-  });
 
   const MaternityUnitsStack = createStackNavigator({
     MaternityUnitsScreen : {
@@ -226,6 +181,15 @@ const MainMenuNavigation = createDrawerNavigator({
             />
     )
   }},
+  NotesScreen:{screen:NotesScreen,  navigationOptions: {
+    drawerLabel: 'Notes',
+    drawerIcon: () => (
+      <Image
+                source={require('./assets/images/allexercises_icon.png')}
+                style={{height:25, width:25}}
+            />
+    )
+  }},
   ReminderScreen: {screen:ReminderScreen,  navigationOptions: {
     drawerLabel: 'Remind Me',
     drawerIcon: () => (
@@ -278,7 +242,7 @@ const MainMenuNavigation = createDrawerNavigator({
  },{
   initialRouteName: 
   'AboutTheAppScreen',
-  contentComponent : (props) => <MainMenuHeader {...props} />
+  contentComponent : (props) => <MainMenuHeader {...props} />,
   // contentComponent : props => <CustomContentComponent {...props} />
 });
 
