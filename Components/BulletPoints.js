@@ -85,7 +85,7 @@ const htmlStyles = StyleSheet.create({
 	},
 	
 	circle: {
-		color: '#2CBBFF',
+		color: global.appMainColor,
 		fontFamily: 'Lato-Bold',
 		fontSize: 20,
 		lineHeight: 25,
@@ -97,7 +97,7 @@ const htmlStyles = StyleSheet.create({
 		paddingLeft: 10
 	},
 	numberContainer:{
-		color: '#2CBBFF',
+		color: global.appMainColor,
 		fontFamily: 'Lato-Bold',
 	},
 	bulletTextContainer:{
@@ -124,7 +124,7 @@ const htmlStyles = StyleSheet.create({
         fontFamily: 'Lato-Bold',
     },
     ol:{
-        color: '#2CBBFF',
+        color: global.appMainColor,
         fontFamily: 'Lato-Regular',
 
     },
@@ -132,7 +132,7 @@ const htmlStyles = StyleSheet.create({
 			fontFamily: 'Lato-Semibold',
 		},
     ul: {
-        color: '#2CBBFF',
+        color: global.appMainColor,
         fontFamily: 'Lato-Light',
     },
     li: {

@@ -35,13 +35,30 @@ class ProgressScreen extends React.Component {
         super(props);
         
         this.state = {
-            counter : 0
+            progressCounter : 0,
+            targetCounter : 0
         }
     }
     componentDidMount(){
         var Analytics = require('../Data/Analytics').default;
         Analytics.hitPage('AboutThisApp');
+        this.loadReminderSettings();
     }
+
+    loadReminderSettings = async()=>{
+
+        var reminderDetails = await AsyncStorage.getItem("@reminderDetails")
+        console.log(reminderDetails);
+        if(reminderDetails !=null){
+        var _parsedReminderDetails = JSON.parse([reminderDetails]);
+            this.setState({
+                targetCounter:_parsedReminderDetails.reminderInterval
+            })
+ 
+        }else{
+            console.log('its empty');
+        }
+     }
    
      
     render(){
@@ -55,7 +72,7 @@ class ProgressScreen extends React.Component {
 
                         <View style={{flex:0.6,alignItems:'center' ,justifyContent:'space-evenly'}}>
                         <TouchableOpacity onPress={()=>{
-                            this.setState({counter:this.state.counter+1});
+                            this.setState({progressCounter:this.state.progressCounter+1});
                             console.log('done');
                         }}>
                             <View style={{width:180,height:180}}>
@@ -80,7 +97,7 @@ class ProgressScreen extends React.Component {
                                     Target
                                 </Text>
                                 <Text style={{fontSize:50, color:'#1ba9d5'}}>
-                                    0
+                                {this.state.targetCounter}
                                 </Text>
                                 </View>
                                 <View style={{flex:0.5, alignItems:'center'}}>
@@ -88,7 +105,7 @@ class ProgressScreen extends React.Component {
                                     So far
                                 </Text>
                                 <Text style={{fontSize:50, color:'#1ba9d5'}}>
-                                    {this.state.counter}
+                                    {this.state.progressCounter}
                                 </Text>
                                 </View>
 
@@ -137,7 +154,7 @@ export default createStackNavigator({
   /* The header config from HomeScreen is now here */
   navigationOptions: ({navigation, screenProps }) => ({
     headerStyle: {
-      backgroundColor: '#2CBBFF',
+      backgroundColor: global.appMainColor,
     },
     headerBackTitle: null,
     headerTintColor: '#fff',

@@ -74,11 +74,10 @@ class CreateContent extends React.Component {
     }
     async getContent(currentPage) {
         try {
-        	//console.log("try get key");
 						const value = await AsyncStorage.getItem('@'+currentPage+':key');
 						this.setState({txt: value, dataSource: JSON.parse(value), isLoading:false});
 						const updateDataSource = JSON.parse(value);
-            this.state.title = updateDataSource[0].title.rendered;
+            			this.state.title = updateDataSource[0].title.rendered;
 						this.state.firstpart = (this.processHTML(this.state.dataSource[0].content.rendered));
 						 const {setParams} = this.props.navigation;
 						 this.render();
@@ -91,7 +90,7 @@ class CreateContent extends React.Component {
     }
     render() {
 				const state = this.state;
-				let tempColor = "#2CBBFF"
+				let tempColor = global.appMainColor
 				if(global.useThemeColor == true){
 					global.useThemeColor = false;
 					tempColor = global.themeColor;
@@ -306,7 +305,6 @@ class CreateContent extends React.Component {
 			}
 			if(a['data-cat'] =='submenu'){
 			const specialSyle = node.attribs.style;
-		  
 			  var hyperLinks:Array = [];
 			  for(var i:int =0; i<node.children.length; i++){
 					if(node.children[i].name == "a"){
@@ -315,6 +313,7 @@ class CreateContent extends React.Component {
 						var chooseFunction = () => this.chooseScreen(linkRef);
 						var splitArray = linkRef.split("/")
 						var pageName = splitArray[splitArray.length-2];
+
 						if(a['data-hospitals'] =='true'){
 							hyperLinks.push(
 								<SubMenuItem  key={this.getNewIndex()} slug = {pageName} parentTitle = {this.state.title} htmlTitle = {linkNode.children[0].data} hospitalpage = {true} hospitalID = {linkNode.attribs['data-hospitalid']}/>
@@ -395,7 +394,7 @@ const styles = StyleSheet.create({
 		width:331,
 	},
 	default: {
-		color: '#2CBBFF',
+		color: global.appMainColor,
 		fontFamily: 'Lato-Light',
 		fontSize: 10,
 	},
@@ -421,7 +420,7 @@ relatedLinksBar: {
     flexDirection: 'row',
     height:120,
     width:null,
-   borderTopColor: '#2CBBFF',
+   borderTopColor: global.appMainColor,
     borderTopWidth: 1,
   },
   subitemText: {
@@ -446,7 +445,7 @@ relatedLinksBar: {
     textAlign: 'left',
   },
   internalLink: {
-    backgroundColor:'#2CBBFF',
+    backgroundColor:global.appMainColor,
     flexGrow:1,
     height:null,
     width:null,
@@ -485,7 +484,7 @@ const htmlStyles = StyleSheet.create({
 	subMenu:{
 		paddingTop: 0,
 		paddingBottom: 20,
-		borderTopColor: '#2CBBFF',
+		borderTopColor: global.appMainColor,
     borderTopWidth: 1,
 	},
 	textComponent:{
@@ -556,7 +555,7 @@ const htmlStyles = StyleSheet.create({
         fontFamily: 'Lato-Bold',
     },
     ol:{
-        color: '#2CBBFF',
+        color: global.appMainColor,
         fontFamily: 'Lato-Regular',
 
     },
@@ -565,7 +564,7 @@ const htmlStyles = StyleSheet.create({
 			color: '#644D45',
 		},
     ul: {
-        color: '#2CBBFF',
+        color: global.appMainColor,
         fontFamily: 'Lato-Light',
     },
     li: {

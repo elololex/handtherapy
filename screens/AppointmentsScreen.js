@@ -20,7 +20,7 @@ const _today = moment().format(_format)
 const MB_DATABASE = 'mumandbaby_db.db'
 const db = SQLite.openDatabase(MB_DATABASE);
 const colors  = {
-    main : '#2CBBFF'
+    main : global.appMainColor
 }
 const APPOINTMENT_DATABASE = '@APPOINTMENT_DATABASE';
 const { Permissions } = Expo;
@@ -220,11 +220,11 @@ componentDidMount(){
             this.state._markedDates
         }
         theme={{
-            dotColor: '#2CBBFF',
+            dotColor: global.appMainColor,
             selectedDotColor: '#fff',
-            arrowColor: '#2CBBFF',
-            selectedColor: '#2CBBFF',
-            todayTextColor:'#2CBBFF'
+            arrowColor: global.appMainColor,
+            selectedColor: global.appMainColor,
+            todayTextColor:global.appMainColor
         }}
         pagingEnabled={true} hideArrows ={false}
         />
@@ -285,7 +285,7 @@ componentDidMount(){
 //     headerMode: 'float',
 //   navigationOptions: ({navigation, screenProps }) => ({
 //     headerStyle: {
-//       backgroundColor: '#2CBBFF',
+//       backgroundColor: global.appMainColor,
 //     },
 //     headerBackTitle: null,
 //     headerTintColor: '#fff',

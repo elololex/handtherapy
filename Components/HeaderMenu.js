@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import { StyleSheet, Text, View ,SafeAreaView, ScrollView, Image,FlatList,TouchableOpacity,AsyncStorage} from 'react-native';
 import {createStackNavigator,createDrawerNavigator,createSwitchNavigator , DrawerItems,NavigationActions} from 'react-navigation';
 import {Header, Item, Icon, Input, InputGroup,List, ListItem,Left,Right,Button} from 'native-base'
-const mainColor =  '#2CBBFF';
+const mainColor =  '#1ba9d5';
+
 
 
 export default class HeaderMenu extends Component {
@@ -40,7 +41,7 @@ export default class HeaderMenu extends Component {
     
     return (
         <View style={{flex:1}}>
-        <View style={{height:70,  backgroundColor:'#2CBBFF', alignItems:'center',
+        <View style={{height:70,  backgroundColor:'#1ba9d5', alignItems:'center',
           justifyContent:'center',}} searchBar rounded>
 
 

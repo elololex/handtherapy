@@ -121,7 +121,7 @@ componentWillUnmount() {
                         this.props.navigation.navigate('EditAppointmentScreen',{eventObject:item})
 
                         console.log('testing')
-                      }} style={{height:100, borderColor:'#2CBBFF'}}>
+                      }} style={{height:100, borderColor:global.appMainColor}}>
                       
                         <Left style={{
                           flex:2, 
@@ -136,7 +136,7 @@ componentWillUnmount() {
                         <Right style={{
                           flex:1
                           }}>
-                        <Icon name='arrow-forward' style={{paddingLeft:10, paddingRight:10, color:'#2CBBFF'}}/>
+                        <Icon name='arrow-forward' style={{paddingLeft:10, paddingRight:10, color:global.appMainColor}}/>
                         </Right>
                       </ListItem>
                     }>

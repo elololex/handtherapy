@@ -447,7 +447,7 @@ const styles = StyleSheet.create({
             fontFamily: 'Lato-Light',
         },
         ol:{
-            color: '#2CBBFF',
+            color: global.appMainColor,
             fontFamily: 'Lato-Regular',
     
         },
@@ -455,7 +455,7 @@ const styles = StyleSheet.create({
           fontFamily: 'Lato-Bold',
         },
         ul: {
-            color: '#2CBBFF',
+            color: global.appMainColor,
             fontFamily: 'Lato-Light',
         },
         li: {

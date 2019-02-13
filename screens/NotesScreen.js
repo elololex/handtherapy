@@ -7,6 +7,8 @@ import User from "../Data/User";
 import CreateContent from '../Components/CreateContent';
 import DefaultContent from './DefaultContentScreen';
 import { TextInput, ScrollView } from 'react-native-gesture-handler';
+import moment from 'moment';
+
 //const util = require('util');
 
 class NotesScreen extends React.Component {
@@ -44,8 +46,51 @@ class NotesScreen extends React.Component {
     componentDidMount(){
         var Analytics = require('../Data/Analytics').default;
         Analytics.hitPage('AboutThisApp');
+
+        this.InitializeNote();
     }
    
+    InitializeNote = async ()=>{
+        try{
+                const localCalendars = await AsyncStorage.getItem("@exercisenotes");
+                console.log(localCalendars)
+
+                const localCalendarsObjects = JSON.parse(localCalendars)
+    
+                if(!localCalendarsObjects || localCalendarsObjects.length==0){
+                    this.setState({searchStatus:'Nie znaleziono spotkań.'});
+                    // return;
+            }
+                var numOfAppoinments = Object.keys(localCalendarsObjects).length;
+                
+                let  newDaysObject = {};
+    
+                var validCalendarEvents = [];
+    
+                const compareEvents = localCalendarsObjects.map(async el =>{
+                    try{
+                        const deviceEvent = await Expo.Calendar.getEventAsync(el.id);
+                        if(deviceEvent){
+                          validCalendarEvents.push(deviceEvent)
+                        }else{
+                            console.log('no appointments')
+                        }
+                        return deviceEvent;
+                    }catch(err){
+                        console.log(err);               
+    
+                    }
+                })
+    
+                const loadEvents = await Promise.all(compareEvents);
+                if(!validCalendarEvents){
+                  this.setState({searchStatus:'No appointments found.'});
+                }
+                this.setState({calendarEvents : validCalendarEvents});
+        }catch(err){
+           console.log(err)
+        }
+    }
      
     render(){
         const {navigation} = this.props;
@@ -66,12 +111,17 @@ class NotesScreen extends React.Component {
                 </View>
                 <View style={{padding:10}}>
                         <Button full onPress={() => {
-                            var txt = [
-                                this.state.notes,
+
+                            var noteInput = {
+                                exerciseNumber : 0,
+                                notes : this.state.notes,
+                                time : moment().format('L HH:mm')
+                            }
+                            var details = [
+                                noteInput,
                                 ...this.state.data
                             ]
-
-                            this.setState({data:txt});
+                            this.setState({data:details});
                         }} style = {{}}>
                                 <Text style ={{color:'#fff'}}>Add Notes</Text>
                     </Button>
@@ -79,19 +129,24 @@ class NotesScreen extends React.Component {
                 <ScrollView>
                 <List dataArray={this.state.data}
                     renderRow={(item) =>
-                      <ListItem style={{height:100, borderColor:'#2CBBFF'}}>
+                      <ListItem style={{height:100, borderColor:global.appMainColor}}>
                       
                         <Left style={{
                           flex:2, 
                           flexDirection:'column'
                           }}>
-                        <Text>{item}</Text>  
+                        <View style={{flex:0.7}}>
+                        <Text>{item.notes}</Text>  
+                        </View>
+                        <View style={{flex:0.3, justifyContent:'center'}}>
+                        <Text style={{fontStyle:'italic'}}>{item.time}</Text>  
+                        </View>
 
                         </Left>
                         <Right style={{
                           flex:1
                           }}>
-                        <Icon name='trash' style={{paddingLeft:10, paddingRight:10, color:'#2CBBFF'}}/>
+                        <Icon name='trash' style={{paddingLeft:10, paddingRight:10, color:global.appMainColor}}/>
                         </Right>
                       </ListItem>
                     }>
@@ -137,7 +192,7 @@ export default createStackNavigator({
   /* The header config from HomeScreen is now here */
   navigationOptions: ({navigation, screenProps }) => ({
     headerStyle: {
-      backgroundColor: '#2CBBFF',
+      backgroundColor: global.appMainColor,
     },
     headerBackTitle: null,
     headerTintColor: '#fff',

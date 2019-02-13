@@ -13,7 +13,7 @@ class GoToLink extends React.Component {
         this.state ={   isLoading: true,
                         linkNode: this.props.linkNode,
                         butColorSet:false,
-                        butColor:'#2CBBFF',
+                        butColor:global.appMainColor,
                         }
     }
 
@@ -27,7 +27,7 @@ class GoToLink extends React.Component {
         const state = this.state;
         
         let buttonText = this.state.linkNode.children[0].data;
-        let butColor = '#2CBBFF';
+        let butColor = global.appMainColor;
         if(this.state.linkNode.attribs['color'] !== undefined){
             butColor = this.state.linkNode.attribs['color'];
             this.state.butColor = this.state.linkNode.attribs['color'];
@@ -142,7 +142,7 @@ class GoToLink extends React.Component {
 
 const styles = StyleSheet.create({
     relatedbutton: {
-        backgroundColor:'#2CBBFF',
+        backgroundColor:global.appMainColor,
         flexGrow:1,
         flexDirection: 'row',
         height:40,
@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
       },
       internalLink: {
-        backgroundColor:'#2CBBFF',
+        backgroundColor:global.appMainColor,
         flexGrow:1,
         flexDirection: 'row',
         width:null,

@@ -168,7 +168,7 @@ export default class FormScreen extends React.Component {
         if(this.state.isLoading){
             return(
             <View style={[styles.container, styles.horizontal]}>
-                <ActivityIndicator size="large" color="#2CBBFF" />
+                <ActivityIndicator size="large" color={global.appMainColor} />
             </View>
             );
         }

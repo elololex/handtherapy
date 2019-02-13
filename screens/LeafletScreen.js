@@ -115,7 +115,7 @@ export default createStackNavigator({
                 </Button>
             ),    
             headerStyle: {
-                backgroundColor: '#2CBBFF',
+                backgroundColor: global.appMainColor,
                 
               },
               headerTintColor: '#fff',
@@ -134,7 +134,7 @@ export default createStackNavigator({
                 </Button>
             ),    
             headerStyle: {
-                backgroundColor: '#2CBBFF',
+                backgroundColor: global.appMainColor,
                 
               },
               headerTintColor: '#fff',
@@ -160,7 +160,7 @@ export default createStackNavigator({
                 </Button>
             ),    
             headerStyle: {
-                backgroundColor: '#2CBBFF',
+                backgroundColor: global.appMainColor,
                 
               },
               headerTintColor: '#fff',
@@ -177,7 +177,7 @@ export default createStackNavigator({
                 </Button>
             ),    
             headerStyle: {
-                backgroundColor: '#2CBBFF',
+                backgroundColor: global.appMainColor,
                 
               },
               headerTintColor: '#fff',
@@ -194,7 +194,7 @@ export default createStackNavigator({
                 </Button>
             ),    
             headerStyle: {
-                backgroundColor: '#2CBBFF',
+                backgroundColor: global.appMainColor,
                 
               },
               headerTintColor: '#fff',
@@ -211,7 +211,7 @@ export default createStackNavigator({
                 </Button>
             ),    
             headerStyle: {
-                backgroundColor: '#2CBBFF',
+                backgroundColor: global.appMainColor,
                 
               },
               headerTintColor: '#fff',
@@ -232,7 +232,7 @@ export default createStackNavigator({
   /* The header config from HomeScreen is now here */
   navigationOptions: ({navigation, screenProps }) => ({
     headerStyle: {
-      backgroundColor: '#2CBBFF',
+      backgroundColor: global.appMainColor,
     },
     headerBackTitle: null,
     headerTintColor: '#fff',

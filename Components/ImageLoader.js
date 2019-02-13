@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
         subMenu:{
             paddingTop: 0,
             paddingBottom: 20,
-            borderTopColor: '#2CBBFF',
+            borderTopColor: global.appMainColor,
         borderTopWidth: 1,
         },
         bulletCircleContainer:{
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
         width: 8,
             height: 8,
         borderRadius: 8/2,
-            backgroundColor: '#2CBBFF',
+            backgroundColor: global.appMainColor,
         },
         bulletNumberContainer:{
             flex: 1,
@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
             paddingLeft: 10
         },
         numberContainer:{
-            color: '#2CBBFF',
+            color: global.appMainColor,
             fontFamily: 'Lato-Bold',
         },
         bulletTextContainer:{
@@ -231,7 +231,7 @@ const styles = StyleSheet.create({
             fontFamily: 'Lato-Bold',
         },
         ol:{
-            color: '#2CBBFF',
+            color: global.appMainColor,
             fontFamily: 'Lato-Regular',
     
         },
@@ -239,7 +239,7 @@ const styles = StyleSheet.create({
                 fontFamily: 'Lato-Semibold',
             },
         ul: {
-            color: '#2CBBFF',
+            color: global.appMainColor,
             fontFamily: 'Lato-Light',
         },
         li: {

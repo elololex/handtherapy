@@ -11,7 +11,7 @@ export default class MaternityUnitsScreen extends React.Component {
     });
     componentDidMount(){
     	var user:User = require('../Data/User').default;
-		
+
     }
     
     

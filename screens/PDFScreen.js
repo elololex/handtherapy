@@ -186,7 +186,7 @@ static navigationOptions = ({navigation}) => {
                   console.log(error);
               }}
               style={styles.pdf}/> 
-            {/* <View style={{position:'absolute',right:20,bottom:20, backgroundColor:'#2CBBFF',width:60,height:60,borderRadius:50, justifyContent:"center",alignItems:'center'}}>
+            {/* <View style={{position:'absolute',right:20,bottom:20, backgroundColor:global.appMainColor,width:60,height:60,borderRadius:50, justifyContent:"center",alignItems:'center'}}>
               <Icon name='print' style={{color:'#fff', padding:10}} onPress={async()=>{
                 try{
                   let results = await Expo.Print.printAsync({uri:this.state.pdfPath});
@@ -206,7 +206,7 @@ static navigationOptions = ({navigation}) => {
         return (
             <View style={styles.container}>
               <View style={{flex:1,justifyContent: 'center',alignContent:'center'}}>
-              <ActivityIndicator size="large" color="#2CBBFF" />
+              <ActivityIndicator size="large" color={global.appMainColor} />
 
               </View>
 

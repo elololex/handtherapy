@@ -131,7 +131,6 @@ class SubMenuItem extends React.Component {
             else{
                 return (
                     <View>
-                        
                             <TouchableOpacity onPress={chooseFunction}>
                                 <View style={styles.subitem}>
                                     <View style={{margin:10,flex:2}}>
@@ -140,9 +139,7 @@ class SubMenuItem extends React.Component {
                                             value={"<p>"+this.state.htmlTitle+"</p>"}
                                             stylesheet={styles}
                                             renderNode={this.renderNode}
-                                            ></HTMLView>
-                                    
-                                    
+                                            ></HTMLView>                                    
                                     </View>
                                     <View style={{margin:10, height:100,width:160, backgroundColor: 'white'}}>
                                     <Thumbnail square key={this.props.slug}
@@ -211,7 +208,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         height:120,
         width:null,
-       borderBottomColor: '#2CBBFF',
+       borderBottomColor: global.appMainColor,
         borderBottomWidth: 1,
       },
       subitemText: {
@@ -236,7 +233,7 @@ const styles = StyleSheet.create({
         textAlign: 'left',
       },
       internalLink: {
-        backgroundColor:'#2CBBFF',
+        backgroundColor:global.appMainColor,
         flexGrow:1,
         height:null,
         width:null,
@@ -254,7 +251,7 @@ const styles = StyleSheet.create({
     
     const styles2 = StyleSheet.create({
         default: {
-            color: '#2CBBFF',
+            color: global.appMainColor,
             fontFamily: 'Merriweather-Regular',
             fontSize: 14,
         },
@@ -280,13 +277,13 @@ const styles = StyleSheet.create({
             fontFamily: 'Lato-Light',
         },
         ol:{
-            color: '#2CBBFF',
+            color: global.appMainColor,
             fontFamily: 'Lato-Regular',
     
         },
         
         ul: {
-            color: '#2CBBFF',
+            color: global.appMainColor,
             fontFamily: 'Lato-Light',
         },
         li: {

@@ -266,12 +266,12 @@ export default class AddAppointment extends Component {
         </KeyboardAwareScrollView>
         </View>
         <View style={{flex:1 ,flexDirection:'row',justifyContent:'space-evenly',alignItems:'center'}}>
-            {/*<Button style={{padding:50,alignSelf:'center',backgroundColor : '#2CBBFF'}} onPress={()=>{
+            {/*<Button style={{padding:50,alignSelf:'center',backgroundColor : global.appMainColor}} onPress={()=>{
                 this.props.navigation.goBack();
             }}>
                 <Text style={{color:'white'}}>CANCEL</Text>
             </Button>
-            <Button style={{padding:50, alignSelf:'center', backgroundColor : '#2CBBFF'}} onPress={()=>{
+            <Button style={{padding:50, alignSelf:'center', backgroundColor : global.appMainColor}} onPress={()=>{
 
                 if(!this.state.appointmentType || !this.state.location){
                     Alert.alert(

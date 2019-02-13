@@ -83,7 +83,7 @@ export default createStackNavigator({
   /* The header config from HomeScreen is now here */
   navigationOptions: ({navigation, screenProps }) => ({
     headerStyle: {
-      backgroundColor: '#2CBBFF',
+      backgroundColor: global.appMainColor,
     },
     headerBackTitle: null,
     headerTintColor: '#fff',

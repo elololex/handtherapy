@@ -70,7 +70,7 @@ const htmlStyles = StyleSheet.create({
     width: 8,
 		height: 8,
     borderRadius: 8/2,
-		backgroundColor: '#2CBBFF',
+		backgroundColor: global.appMainColor,
 	},
 	bulletNumberContainer:{
 		flex: 1,
@@ -78,7 +78,7 @@ const htmlStyles = StyleSheet.create({
 		paddingLeft: 10
 	},
 	numberContainer:{
-		color: '#2CBBFF',
+		color: global.appMainColor,
 		fontFamily: 'Lato-Regular',
 	},
 	bulletTextContainer:{
@@ -144,7 +144,7 @@ const htmlStyles = StyleSheet.create({
         fontFamily: 'Lato-Light',
     },
     ol:{
-        color: '#2CBBFF',
+        color: global.appMainColor,
         fontFamily: 'Lato-Regular',
 
     },
@@ -152,7 +152,7 @@ const htmlStyles = StyleSheet.create({
 			fontFamily: 'Lato-Bold',
 		},
     ul: {
-        color: '#2CBBFF',
+        color: global.appMainColor,
         fontFamily: 'Lato-Light',
     },
     li: {

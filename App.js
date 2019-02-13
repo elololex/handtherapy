@@ -40,11 +40,12 @@ import EditAppointmentScreen from './screens/appointment_stack/EditAppointment';
 import SearchBrookerScreen from './screens/searchStack/SearchBroker';
 
 //Menu
-const mainColor =  '#2CBBFF';
+const mainColor =  '#1ba9d5';
+global.appMainColor = '#1ba9d5'
   const CustomContentComponent = (props)=>{
     return (
       <View style={{flex:1}}>
-      <View style={{height:150,  backgroundColor:'#2CBBFF', alignItems:'center',
+      <View style={{height:150,  backgroundColor:global.appMainColor, alignItems:'center',
         justifyContent:'center',}} searchBar rounded>
       <View style={{flex:1,alignItems:'center', justifyContent:'flex-end'}}>
       <Image
@@ -122,7 +123,7 @@ const mainColor =  '#2CBBFF';
         headerMode: 'float',
       navigationOptions: ({navigation, screenProps }) => ({
         headerStyle: {
-          backgroundColor: '#2CBBFF',
+          backgroundColor: global.appMainColor,
         },
         headerBackTitle: null,
         headerTintColor: '#fff',

@@ -420,7 +420,7 @@ export default class SplashScreen extends React.Component {
 
                 const categoryName = url[0];
                 const searchEnable = url[1];
-                const catURL = "http://mumandbaby.imagineear.com/wp-json/wp/v2/categories?include="+categoryName;
+                const catURL = "http://handtherapy.imagineear.com/wp-json/wp/v2/categories?include="+categoryName;
                 const catResponse = await fetch(catURL);
                 //console.log("recieved category: "+ catURL);
                 const catData =  await catResponse.json();
@@ -438,7 +438,7 @@ export default class SplashScreen extends React.Component {
                         console.log("need to check date:" + checkingDate);
                     //}
                     let urlString;
-                    urlString = 'http://mumandbaby.imagineear.com/wp-json/wp/v2/posts?'+checkingDate+'per_page=100&page='+pageNumber+'&categories='+categoryName;
+                    urlString = 'http://handtherapy.imagineear.com/wp-json/wp/v2/posts?'+checkingDate+'per_page=100&page='+pageNumber+'&categories='+categoryName;
 
                     console.log("load category: "+ urlString);
                     let data = [];
@@ -627,7 +627,7 @@ export default class SplashScreen extends React.Component {
                   }}>
             <View>
             <Image
-                                        source={require('../assets/images/logo_and_text.png')}
+                                        // source={require('../assets/images/logo_and_text.png')}
                                         style={{ width:imageWidth, height:imageHeight, marginTop:60,marginBottom:60, backgroundColor:"#fff"}}
                                 />
             <View style={{flex:1, width: Dimensions.get('window')-40, padding:20}}>
@@ -783,7 +783,7 @@ const styles = StyleSheet.create({
 		width:331,
 	},
 	default: {
-		color: '#2CBBFF',
+		color: global.appMainColor,
 		fontFamily: 'Lato-Light',
 		fontSize: 14,
 	},
@@ -809,7 +809,7 @@ relatedLinksBar: {
     flexDirection: 'row',
     height:120,
     width:null,
-   borderTopColor: '#2CBBFF',
+   borderTopColor: global.appMainColor,
     borderTopWidth: 1,
   },
   subitemText: {
@@ -834,7 +834,7 @@ relatedLinksBar: {
     textAlign: 'left',
   },
   internalLink: {
-    backgroundColor:'#2CBBFF',
+    backgroundColor:global.appMainColor,
     flexGrow:1,
     height:null,
     width:null,
